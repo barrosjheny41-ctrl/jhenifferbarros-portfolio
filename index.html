@@ -48,6 +48,18 @@
             color: #60a5fa;
             border-color: #3b82f6;
         }
+        /* Custom scrollbar for mockups */
+        .mockup-scroll::-webkit-scrollbar {
+            width: 4px;
+            height: 4px;
+        }
+        .mockup-scroll::-webkit-scrollbar-track {
+            background: rgba(15, 23, 42, 0.5);
+        }
+        .mockup-scroll::-webkit-scrollbar-thumb {
+            background: #3b82f6;
+            border-radius: 4px;
+        }
     </style>
 </head>
 <body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-blue-500/30 selection:text-blue-200">
@@ -84,20 +96,19 @@
         <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(37,99,235,0.08),transparent_50%)]"></div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-                <!-- Informações de Perfil e Biografia -->
                 <div class="lg:col-span-7 space-y-4">
                     <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-100 tracking-tight leading-tight">
                         Inteligência em <span class="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">Licitações</span> e Automação de Processos
                     </h1>
                     <p class="text-sm sm:text-base text-slate-400 leading-relaxed">
-                        Especialista na estruturação de processos B2G, parametrização de CRMs e desenvolvimento de ferramentas inteligentes em <strong>Python</strong>, <strong>JavaScript</strong> e <strong>Google Apps Script</strong> para otimizar propostas operacionais e analisar termos regulatórios.
+                        Especialista na estruturação de processos B2G, parametrização de CRMs e desenvolvimento de ferramentas inteligentes em <strong>Python</strong>, <strong>JavaScript</strong> e <strong>Google Apps Script</strong> para otimizar propostas operacionais e analisar termos regulatórios. Além do desenvolvimento de interfaces web e soluções Full Stack.
                     </p>
                     <div class="p-3.5 rounded-xl bg-slate-900/60 border border-slate-850 shadow-sm flex items-center gap-3.5 max-w-xl">
                         <div class="h-9 w-9 rounded-lg bg-blue-950/40 text-blue-400 flex items-center justify-center text-base shrink-0">
                             <i class="fas fa-chart-line"></i>
                         </div>
                         <p class="text-[11px] text-slate-400 leading-normal">
-                            <strong class="text-slate-200">Foco Estratégico:</strong> Automatização do ciclo comercial de licitações, análise dinâmica de conformidade e integração com APIs para impulsionar a eficiência do time de propostas.
+                            <strong class="text-slate-200">Foco Estratégico:</strong> Automatização do ciclo comercial de licitações, análise dinâmica de conformidade, desenvolvimento de software de gestão (SaaS) e integração com APIs.
                         </p>
                     </div>
                     <div class="flex flex-wrap gap-3 pt-1">
@@ -107,7 +118,6 @@
                     </div>
                 </div>
 
-                <!-- Foto de Perfil Personalizada e Cartão -->
                 <div class="lg:col-span-5 bg-gradient-to-br from-slate-900 to-slate-950 p-5 rounded-2xl border border-slate-850 relative shadow-xl">
                     <div class="flex flex-col items-center text-center space-y-3 pb-3 border-b border-slate-900">
                         <div class="relative group">
@@ -153,8 +163,8 @@
                     <div class="h-8 w-8 rounded-lg bg-yellow-950/50 text-yellow-500 flex items-center justify-center text-md mb-2">
                         <i class="fab fa-js"></i>
                     </div>
-                    <span class="font-bold text-slate-200 text-xs block">Integração & Apps Script</span>
-                    <p class="text-[11px] text-slate-500 mt-1">Google Apps Script, automatizações em folhas de cálculo corporativas e Webhooks dinâmicos no ecossistema Google Workspace.</p>
+                    <span class="font-bold text-slate-200 text-xs block">Web & Apps Script</span>
+                    <p class="text-[11px] text-slate-500 mt-1">Desenvolvimento Web Frontend, Apps Script corporativo, criação de Dashboards interativos e Webhooks.</p>
                 </div>
                 <div class="p-4 rounded-xl bg-slate-900/40 border border-slate-850">
                     <div class="h-8 w-8 rounded-lg bg-purple-950/50 text-purple-400 flex items-center justify-center text-md mb-2">
@@ -168,7 +178,7 @@
                         <i class="fas fa-file-invoice-dollar"></i>
                     </div>
                     <span class="font-bold text-slate-200 text-xs block">Procurement de B2G</span>
-                    <p class="text-[11px] text-slate-500 mt-1">Legislação de Contratação Pública (Lei 14.133/21), CRM Management, TASY, regras de qualificação económico-financeira hospitalar.</p>
+                    <p class="text-[11px] text-slate-500 mt-1">Legislação de Contratação Pública, CRM Management, regras financeiras governamentais e criação de pipelines operacionais.</p>
                 </div>
             </div>
         </div>
@@ -183,25 +193,34 @@
             </div>
 
             <!-- Botões Seletores de Projetos -->
-            <div class="flex flex-wrap justify-center gap-2 mb-10 max-w-5xl mx-auto bg-slate-900/50 p-2 rounded-2xl border border-slate-850">
-                <button onclick="changeActiveProject('p1')" id="btn-p1" class="project-tab active-tab px-4 py-2.5 rounded-xl font-bold text-xs transition-all border border-transparent">
-                    1. Radar de Notícias (031)
+            <div class="flex flex-wrap justify-center gap-2 mb-10 max-w-6xl mx-auto bg-slate-900/50 p-2 rounded-2xl border border-slate-850">
+                <button onclick="changeActiveProject('p1')" id="btn-p1" class="project-tab active-tab px-3 py-2 rounded-xl font-bold text-xs transition-all border border-transparent">
+                    1. Radar Notícias
                 </button>
-                <button onclick="changeActiveProject('p2')" id="btn-p2" class="project-tab px-4 py-2.5 rounded-xl font-bold text-xs transition-all border border-transparent text-slate-400 hover:text-slate-200">
-                    2. Robô de Editais (PNCP)
+                <button onclick="changeActiveProject('p2')" id="btn-p2" class="project-tab px-3 py-2 rounded-xl font-bold text-xs transition-all border border-transparent text-slate-400 hover:text-slate-200">
+                    2. Robô Editais
                 </button>
-                <button onclick="changeActiveProject('p3')" id="btn-p3" class="project-tab px-4 py-2.5 rounded-xl font-bold text-xs transition-all border border-transparent text-slate-400 hover:text-slate-200">
-                    3. Hub Analyzer (Dashboard)
+                <button onclick="changeActiveProject('p3')" id="btn-p3" class="project-tab px-3 py-2 rounded-xl font-bold text-xs transition-all border border-transparent text-slate-400 hover:text-slate-200">
+                    3. Hub Analyzer
                 </button>
-                <button onclick="changeActiveProject('p4')" id="btn-p4" class="project-tab px-4 py-2.5 rounded-xl font-bold text-xs transition-all border border-transparent text-slate-400 hover:text-slate-200">
-                    4. Analisador de Edital
+                <button onclick="changeActiveProject('p4')" id="btn-p4" class="project-tab px-3 py-2 rounded-xl font-bold text-xs transition-all border border-transparent text-slate-400 hover:text-slate-200">
+                    4. IA Analisador
                 </button>
-                <button onclick="changeActiveProject('p5')" id="btn-p5" class="project-tab px-4 py-2.5 rounded-xl font-bold text-xs transition-all border border-transparent text-slate-400 hover:text-slate-200">
-                    5. Bid Copilot (IA Suspensa)
+                <button onclick="changeActiveProject('p5')" id="btn-p5" class="project-tab px-3 py-2 rounded-xl font-bold text-xs transition-all border border-transparent text-slate-400 hover:text-slate-200">
+                    5. Bid Copilot
                 </button>
-                <!-- Novo Botão P6 -->
-                <button onclick="changeActiveProject('p6')" id="btn-p6" class="project-tab px-4 py-2.5 rounded-xl font-bold text-xs transition-all border border-transparent text-slate-400 hover:text-slate-200">
-                    6. Disparo de E-mails
+                <button onclick="changeActiveProject('p6')" id="btn-p6" class="project-tab px-3 py-2 rounded-xl font-bold text-xs transition-all border border-transparent text-slate-400 hover:text-slate-200">
+                    6. E-mails Auto
+                </button>
+                <!-- Novos Botões (P7, P8, P9) -->
+                <button onclick="changeActiveProject('p7')" id="btn-p7" class="project-tab px-3 py-2 rounded-xl font-bold text-xs transition-all border border-transparent text-slate-400 hover:text-slate-200">
+                    7. Criação de Sites
+                </button>
+                <button onclick="changeActiveProject('p8')" id="btn-p8" class="project-tab px-3 py-2 rounded-xl font-bold text-xs transition-all border border-transparent text-slate-400 hover:text-slate-200">
+                    8. Finanças App
+                </button>
+                <button onclick="changeActiveProject('p9')" id="btn-p9" class="project-tab px-3 py-2 rounded-xl font-bold text-xs transition-all border border-transparent text-slate-400 hover:text-slate-200">
+                    9. BidFlow Gestão
                 </button>
             </div>
 
@@ -226,60 +245,22 @@
                     <div class="lg:col-span-7 space-y-6">
                         <div class="bg-slate-900 rounded-2xl border border-slate-855 shadow-md overflow-hidden text-xs">
                             <div class="bg-slate-950 px-4 py-2 border-b border-slate-850 flex justify-between items-center text-[10px] text-slate-400 font-bold">
-                                <span>REGISTRO DE EXECUÇÃO - APPSCRIPT GOOGLE SHEET</span>
+                                <span>REGISTRO DE EXECUÇÃO - APPSCRIPT</span>
                                 <span class="bg-blue-950/80 text-blue-400 px-2 py-0.5 rounded border border-blue-900/30">Ativo</span>
                             </div>
                             <div class="p-4 space-y-3 font-mono">
-                                <div class="flex gap-2 items-center border-b border-slate-850 pb-2">
-                                    <button class="bg-blue-600 text-white font-bold px-3 py-1 rounded flex items-center gap-1 hover:bg-blue-700">
-                                        <i class="fas fa-play text-[9px]"></i> Executar
-                                    </button>
-                                    <button class="border border-slate-800 text-slate-400 px-3 py-1 rounded flex items-center gap-1">
-                                        <i class="fas fa-bug text-[9px]"></i> Depuração
-                                    </button>
-                                    <div class="bg-slate-950 px-3 py-1 rounded border border-slate-850 text-slate-300">
-                                        RADAR_TOTAL_24H <i class="fas fa-chevron-down text-[8px] ml-1"></i>
-                                    </div>
-                                </div>
                                 <div class="grid grid-cols-3 gap-2 text-center text-[10px] bg-slate-950/80 p-2 rounded border border-slate-850">
                                     <div>
                                         <p class="text-slate-500 uppercase font-bold">Evento</p>
-                                        <p class="text-slate-300 font-bold mt-0.5">De acordo com horário</p>
+                                        <p class="text-slate-300 font-bold mt-0.5">Automático</p>
                                     </div>
                                     <div>
-                                        <p class="text-slate-300 font-bold mt-0.5">RADAR_TOTAL_24H</p>
+                                        <p class="text-slate-300 font-bold mt-0.5">RADAR_TOTAL</p>
                                     </div>
                                     <div>
-                                        <p class="text-slate-500 uppercase font-bold">Taxa de Erros</p>
+                                        <p class="text-slate-500 uppercase font-bold">Taxa Erros</p>
                                         <p class="text-emerald-500 font-bold mt-0.5">0%</p>
                                     </div>
-                                </div>
-                                <div class="border border-slate-850 rounded overflow-hidden">
-                                    <table class="w-full text-left">
-                                        <thead class="bg-slate-950 text-slate-400">
-                                            <tr class="border-b border-slate-850">
-                                                <th class="p-2 border-r border-slate-855">EDITAIS / VAGAS</th>
-                                                <th class="p-2">HISTÓRICO DE EDIÇÕES</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody class="divide-y divide-slate-855 bg-slate-900/20">
-                                            <tr>
-                                                <td class="p-2 border-r border-slate-850">
-                                                    <span class="blurred-text block">Crise financeira em Campo Grande: secretária só volta em 2026</span>
-                                                    <span class="text-[9px] text-slate-500 mt-1 block">Fonte: Campo Grande News</span>
-                                                </td>
-                                                <td class="p-2 text-slate-300">
-                                                    <div class="flex items-center gap-1.5">
-                                                        <div class="h-4 w-4 rounded-full bg-blue-950 text-blue-400 flex items-center justify-center text-[8px] font-bold border border-blue-800/30">JB</div>
-                                                        <div>
-                                                            <span class="font-bold text-slate-200 block text-[9px]">Jheniffer Barros</span>
-                                                            <span class="text-[8px] text-slate-500">11 de dezembro, 04:32</span>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
                                 </div>
                             </div>
                         </div>
@@ -290,14 +271,12 @@
                                     <span class="h-2 w-2 rounded-full bg-emerald-500 animate-pulse"></span>
                                     <span>Canal: Radar Local - Alertas</span>
                                 </span>
-                                <span class="text-[9px]">Robô Radar App</span>
                             </div>
                             <div class="p-4 space-y-3">
                                 <div class="bg-slate-950/40 border border-slate-850 rounded-xl p-3 space-y-1">
                                     <p class="text-amber-400 font-bold">🚨 PORTAL INFORMA: PRIORIDADE ALTA 🚨</p>
                                     <p class="text-slate-300 mt-2"><span class="text-slate-500">📍 LOCAL:</span> SÃO PAULO (SP)</p>
                                     <p class="text-slate-300"><span class="text-slate-500">📰 NOTÍCIA:</span> <span class="blurred-text">FUNCIONÁRIOS DO HOSPITAL DE PIRAJU PODEM ENTRAR EM GREVE...</span></p>
-                                    <p class="text-slate-300"><span class="text-slate-500">🔗 LINK:</span> <span class="text-blue-400 underline cursor-pointer text-[10px]">https://news.google.com/rss/articles/...</span></p>
                                 </div>
                             </div>
                         </div>
@@ -315,66 +294,34 @@
                             Robô automatizado de extracção de dados que consulta a API nacional de contratação pública, filtra exigências direcionadas a serviços de saúde e hospitalares e notifica os analistas de forma assíncrona.
                         </p>
                         <div class="space-y-3 text-xs border-t border-slate-855 pt-4 text-slate-500">
-                            <p><strong class="text-slate-400">Gargalo Resolvido:</strong> Procura exaustiva de novas publicações de compras governamentais por meio de portais estatais lentos e dispersos.</p>
-                            <p><strong class="text-slate-400">Resultado:</strong> Mapeamento imediato de novas licitações de saúde, assegurando tempo máximo para elaboração das propostas e evitando perda de receita comercial.</p>
+                            <p><strong class="text-slate-400">Gargalo Resolvido:</strong> Procura exaustiva de novas publicações lentas.</p>
+                            <p><strong class="text-slate-400">Resultado:</strong> Mapeamento imediato de novas licitações de saúde.</p>
                         </div>
                     </div>
                     <div class="lg:col-span-7 space-y-6">
                         <div class="bg-slate-900 rounded-2xl border border-slate-850 shadow-md overflow-hidden text-[10px] font-mono">
                             <div class="bg-amber-600 text-white px-4 py-2 font-bold uppercase tracking-wider flex justify-between items-center">
-                                <span>Mapeador PNCP - Dados Consolidados</span>
-                                <span class="bg-amber-700 text-[9px] px-1.5 py-0.5 rounded">Ativo</span>
+                                <span>Mapeador PNCP - Consolidados</span>
                             </div>
                             <div class="p-4 overflow-x-auto bg-slate-900/20">
                                 <table class="w-full text-left">
                                     <thead>
                                         <tr class="bg-slate-950 border-b border-slate-850 text-slate-400 font-bold">
                                             <th class="p-2 border-r border-slate-850">Termo Procurado</th>
-                                            <th class="p-2 border-r border-slate-855">Data Captura</th>
-                                            <th class="p-2 border-r border-slate-855">Objeto do Edital</th>
                                             <th class="p-2 text-right">Valor Estimado</th>
                                         </tr>
                                     </thead>
                                     <tbody class="divide-y divide-slate-855">
                                         <tr>
                                             <td class="p-2 border-r border-slate-850 text-slate-300">Saúde/Hospital</td>
-                                            <td class="p-2 border-r border-slate-850 whitespace-nowrap text-slate-400">15/12/2025 16:56:14</td>
-                                            <td class="p-2 border-r border-slate-850 text-slate-300">
-                                                <span class="blurred-text block">O objeto da licitação é o REGISTRO DE PREÇO PARA FUTURAS E EVENTUAIS AQUISIÇÕES DE MATERIAL MÉDICO HOSPITALAR...</span>
-                                            </td>
                                             <td class="p-2 text-right font-bold text-emerald-400 whitespace-nowrap">R$ 507.650,00</td>
                                         </tr>
                                         <tr>
                                             <td class="p-2 border-r border-slate-850 text-slate-300">Saúde/Hospital</td>
-                                            <td class="p-2 border-r border-slate-850 whitespace-nowrap text-slate-400">16/12/2025 00:27:40</td>
-                                            <td class="p-2 border-r border-slate-850 text-slate-300">
-                                                <span class="blurred-text block">Implantação da subestação abrigada de 1.500kva da secretaria estadual de saúde...</span>
-                                            </td>
                                             <td class="p-2 text-right font-bold text-emerald-400 whitespace-nowrap">R$ 1.687.503,40</td>
                                         </tr>
                                     </tbody>
                                 </table>
-                            </div>
-                        </div>
-                        <div class="bg-slate-900 text-slate-100 rounded-2xl border border-slate-850 shadow-md overflow-hidden text-xs font-mono">
-                            <div class="bg-slate-950 px-4 py-2 border-b border-slate-850 flex justify-between items-center text-slate-400">
-                                <span class="flex items-center gap-2">
-                                    <span class="h-2 w-2 rounded-full bg-red-500 animate-pulse"></span>
-                                    <span>Canal: Editais - Radar</span>
-                                </span>
-                                <span class="text-[9px]">Robô Edital App</span>
-                            </div>
-                            <div class="p-4 space-y-2">
-                                <div class="bg-slate-950/40 border-l-4 border-l-red-500 rounded p-3 space-y-1.5 text-[11px]">
-                                    <p class="text-red-400 font-bold">🚨 NOVA OPORTUNIDADE DETECTADA 🚨</p>
-                                    <p class="text-slate-500 mt-2"><span class="text-slate-600">ID:</span> <span class="redacted-bar w-16"></span></p>
-                                    <p class="text-slate-500"><span class="text-slate-600">Nº Edital:</span> N/A</p>
-                                    <p class="text-slate-300"><span class="text-slate-500">Publicação:</span> 02/01/2026</p>
-                                    <p class="text-slate-300"><span class="text-slate-500">Valor:</span> R$ 50.400,00</p>
-                                    <p class="text-slate-300"><span class="text-slate-500">Modalidade:</span> OUTROS</p>
-                                    <p class="text-slate-300"><span class="text-slate-500">Objeto:</span> <span class="blurred-text">Contratação de profissional devidamente especializado para a prestação de serviços médicos consistentes em consultas e atendimentos na área de neuropediatria...</span></p>
-                                    <p class="text-slate-300"><span class="text-slate-500">Link:</span> <span class="text-blue-400 underline cursor-pointer text-[10px]">https://pncp.gov.br/app/editais/...</span></p>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -388,98 +335,33 @@
                             <h3 class="text-2xl font-extrabold text-slate-100 mt-3">Hub Analyzer Dashboard</h3>
                         </div>
                         <p class="text-sm text-slate-400 leading-relaxed">
-                            Plataforma de visualização e monitoramento geográfico das operações e prospecções ativas comerciais de saúde. Centraliza bases de dados e reduz inconsistências no controlo de comissões e prazos contratuais.
+                            Plataforma de visualização e monitoramento geográfico das operações e prospecções ativas comerciais de saúde.
                         </p>
                         <div class="space-y-3 text-xs border-t border-slate-850 pt-4 text-slate-500">
-                            <p><strong class="text-slate-400">Gargalo Resolvido:</strong> Informações fragmentadas em ficheiros locais complexos, gerando riscos de conformidade regulatória.</p>
-                            <p><strong class="text-slate-400">Resultado:</strong> Fonte única de dados de operações integrada e rápida, reduzindo o tempo de elaboração de relatórios analíticos de liderança.</p>
+                            <p><strong class="text-slate-400">Gargalo Resolvido:</strong> Informações fragmentadas em ficheiros locais.</p>
+                            <p><strong class="text-slate-400">Resultado:</strong> Fonte única de dados geográficos integrada e rápida.</p>
                         </div>
                     </div>
                     <div class="lg:col-span-7 space-y-6">
                         <div class="bg-slate-900 rounded-2xl border border-slate-850 shadow-md overflow-hidden text-xs">
-                            <div class="bg-slate-950 px-4 py-3 border-b border-slate-855 flex flex-wrap justify-between items-center gap-3">
-                                <div class="flex items-center gap-2">
-                                    <div class="h-6 w-6 rounded bg-blue-600 text-white flex items-center justify-center font-bold text-[10px]">H</div>
-                                    <span class="font-extrabold text-slate-200 text-[11px]">Portal de Consultas</span>
-                                </div>
-                                <div class="flex items-center gap-2">
-                                    <input type="text" placeholder="Procurar em todos dados..." class="px-2 py-1 bg-slate-900 border border-slate-800 text-slate-300 rounded text-[10px] w-36 focus:outline-none" readonly>
-                                    <button class="bg-blue-950/50 text-blue-400 border border-blue-900/40 text-[10px] px-2.5 py-1 rounded font-bold">
-                                        <i class="fas fa-filter text-[8px]"></i> Filtros
-                                    </button>
-                                </div>
-                            </div>
                             <div class="p-4 bg-slate-900/40 space-y-4">
                                 <div class="grid grid-cols-3 gap-3 text-center">
                                     <div class="bg-slate-950/60 p-3 rounded-xl border border-slate-850 shadow-sm">
-                                        <span class="text-[9px] uppercase font-bold text-slate-500">Total de Registros</span>
+                                        <span class="text-[9px] uppercase font-bold text-slate-500">Registros</span>
                                         <span class="text-xl font-extrabold text-blue-400 block mt-0.5">64</span>
                                     </div>
                                     <div class="bg-slate-950/60 p-3 rounded-xl border border-slate-850 shadow-sm">
-                                        <span class="text-[9px] uppercase font-bold text-slate-500">Municípios Atendidos</span>
+                                        <span class="text-[9px] uppercase font-bold text-slate-500">Municípios</span>
                                         <span class="text-xl font-extrabold text-teal-400 block mt-0.5">45</span>
                                     </div>
-                                    <div class="bg-slate-950/60 p-3 rounded-xl border border-slate-850 shadow-sm">
-                                        <span class="text-[9px] uppercase font-bold text-slate-500">Última Atualização</span>
-                                        <span class="text-[10px] font-bold text-slate-300 block mt-2">26/06/2026 às 09:37</span>
-                                    </div>
                                 </div>
-                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                    <div class="bg-slate-950/60 p-3 rounded-xl border border-slate-850 shadow-sm flex flex-col items-center justify-center">
-                                        <span class="text-[10px] font-bold text-slate-300 mb-2 self-start">Presença Nacional</span>
-                                        <svg class="w-32 h-32" viewBox="0 0 500 500" fill="none">
-                                            <path d="M 120 100 Q 200 50 350 120 T 450 300 Q 400 450 300 480 T 150 400 T 50 300 T 120 100 Z" fill="#475569" opacity="0.4"/>
-                                            <path d="M 280 320 Q 340 330 360 380 Q 330 420 280 430 T 230 380 T 280 320 Z" fill="#059669" opacity="0.8"/>
-                                            <path d="M 290 390 Q 320 400 330 420 Q 300 440 280 440 T 260 410 T 290 390 Z" fill="#2563eb"/>
-                                        </svg>
-                                    </div>
-                                    <div class="bg-slate-950/60 p-3 rounded-xl border border-slate-850 shadow-sm">
-                                        <span class="text-[10px] font-bold text-slate-300 block mb-2">Estados em Destaque</span>
-                                        <div class="space-y-2 text-[10px]">
-                                            <div>
-                                                <div class="flex justify-between font-bold text-slate-400 mb-0.5">
-                                                    <span>1. São Paulo</span>
-                                                    <span>43</span>
-                                                </div>
-                                                <div class="w-full bg-slate-900 h-1 rounded-full"><div class="bg-blue-500 h-full rounded-full" style="width: 80%"></div></div>
-                                            </div>
-                                            <div>
-                                                <div class="flex justify-between font-bold text-slate-400 mb-0.5">
-                                                    <span>2. Minas Gerais</span>
-                                                    <span>4</span>
-                                                </div>
-                                                <div class="w-full bg-slate-900 h-1 rounded-full"><div class="bg-blue-500 h-full rounded-full" style="width: 15%"></div></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="bg-slate-950/60 p-3 rounded-xl border border-slate-850 shadow-sm">
-                                    <div class="overflow-x-auto text-[9px] font-mono">
-                                        <table class="w-full text-left">
-                                            <thead>
-                                                <tr class="bg-slate-950 text-slate-500 font-bold border-b border-slate-850">
-                                                    <th class="p-1">MUNICÍPIO</th>
-                                                    <th class="p-1">COLIGAÇÃO</th>
-                                                    <th class="p-1">UNIDADE</th>
-                                                    <th class="p-1">SITUAÇÃO CONTRATUAL</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody class="divide-y divide-slate-855 text-slate-300 font-bold">
-                                                <tr>
-                                                    <td class="p-1 text-slate-200">SÃO PAULO</td>
-                                                    <td class="p-1 text-slate-500">MDB</td>
-                                                    <td class="p-1 text-slate-400">HOSP ERMELINO MATARAZZO</td>
-                                                    <td class="p-1"><span class="bg-yellow-950/60 text-yellow-500 text-[8px] px-1 rounded border border-yellow-800/40 font-bold">PROSPECÇÃO</span></td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="p-1 text-slate-200">LONTRA</td>
-                                                    <td class="p-1 text-slate-500">MDB</td>
-                                                    <td class="p-1 text-slate-400">Unidade Básica de Saúde Antônia...</td>
-                                                    <td class="p-1"><span class="bg-yellow-950/60 text-yellow-500 text-[8px] px-1 rounded border border-yellow-800/40 font-bold">PROSPECÇÃO</span></td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
+                                <div class="bg-slate-950/60 p-3 rounded-xl border border-slate-850 shadow-sm flex flex-col items-center justify-center">
+                                    <span class="text-[10px] font-bold text-slate-300 mb-2 self-start">Presença Nacional Geográfica (Mapa de Calor)</span>
+                                    <svg class="w-32 h-32" viewBox="0 0 500 500" fill="none">
+                                        <path d="M 120 100 Q 200 50 350 120 T 450 300 Q 400 450 300 480 T 150 400 T 50 300 T 120 100 Z" fill="#475569" opacity="0.4"/>
+                                        <path d="M 280 320 Q 340 330 360 380 Q 330 420 280 430 T 230 380 T 280 320 Z" fill="#059669" opacity="0.8"/>
+                                        <path d="M 290 390 Q 320 400 330 420 Q 300 440 280 440 T 260 410 T 290 390 Z" fill="#2563eb"/>
+                                    </svg>
                                 </div>
                             </div>
                         </div>
@@ -494,51 +376,28 @@
                             <h3 class="text-2xl font-extrabold text-slate-100 mt-3">Analisador de Editais Local</h3>
                         </div>
                         <p class="text-sm text-slate-400 leading-relaxed">
-                            Motor de processamento de texto que avalia ficheiros de edital em formato PDF de forma automatizada, listando prazos legais de recursos, garantias e gerando propostas comerciais preliminares.
+                            Motor de processamento de texto que avalia ficheiros de edital em formato PDF de forma automatizada, listando prazos legais de recursos e gerando propostas preliminares.
                         </p>
                         <div class="space-y-3 text-xs border-t border-slate-850 pt-4 text-slate-500">
-                            <p><strong class="text-slate-400">Gargalo Resolvido:</strong> Leitura analítica manual e demorada de editais densos para validação de conformidade técnica.</p>
-                            <p><strong class="text-slate-400">Resultado:</strong> Triagem preliminar de documentos extensos consolidada de 3 horas para apenas 12 segundos.</p>
+                            <p><strong class="text-slate-400">Gargalo Resolvido:</strong> Leitura analítica manual demorada.</p>
+                            <p><strong class="text-slate-400">Resultado:</strong> Triagem consolidada de 3 horas para apenas 12 segundos.</p>
                         </div>
                     </div>
                     <div class="lg:col-span-7 space-y-6">
                         <div class="bg-slate-900 rounded-2xl border border-slate-850 shadow-md overflow-hidden text-xs">
                             <div class="bg-slate-950 text-slate-300 px-4 py-3 flex justify-between items-center text-[10px] font-mono">
                                 <span>Engine de Leitura Local Ativo</span>
-                                <span class="bg-blue-600 text-[9px] px-2 py-0.5 rounded font-bold">Terminal Active</span>
                             </div>
-                            <div class="border-b border-slate-855 bg-slate-900 flex text-[10px] font-bold">
-                                <button onclick="changeDocumentSubtab('sub1')" id="sub-btn-sub1" class="px-4 py-2 border-b-2 border-blue-600 text-blue-400">Resumo Estratégico</button>
-                                <button onclick="changeDocumentSubtab('sub2')" id="sub-btn-sub2" class="px-4 py-2 border-b-2 border-transparent text-slate-400 hover:text-slate-200">Documento & Proposta</button>
-                            </div>
-                            
                             <div id="sub-wrap-sub1" class="sub-wrapper p-5 space-y-4">
-                                <div class="border-l-4 border-l-blue-500 pl-3">
-                                    <h4 class="font-extrabold text-slate-200">ÓRGÃO PÚBLICO (xxx)</h4>
-                                </div>
                                 <div class="bg-slate-950/40 p-3 rounded border border-slate-850 space-y-2 text-[10.5px]">
                                     <p>✔️ <span class="font-bold text-slate-300">Portal de Participação:</span> Plataforma Eletrónica indicada no instrumento convocatório.</p>
                                     <p>✔️ <span class="font-bold text-slate-300">Modalidade:</span> Pregão Eletrónico (Regido pela Lei Federal nº 14.133/21).</p>
-                                    <p>✔️ <span class="font-bold text-slate-300">Critério de Julgamento:</span> Menor Preço Global / Menor Preço por Lote de Serviços.</p>
                                 </div>
                                 <div class="p-3 bg-blue-950/20 rounded border border-blue-900/30">
                                     <h5 class="font-extrabold text-blue-400 mb-1">PONTO 2: GARANTIAS E VISITAS TÉCNICAS</h5>
                                     <p class="text-[10px] text-slate-400 leading-normal font-mono">
-                                        ✔️ <strong>Garantia de Proposta:</strong> <span class="blurred-text">(xxx)</span><br>
-                                        ✔️ <strong>Garantia Contratual:</strong> Exigível contratualmente em percentagem padrão estabelecida pela Lei 14.133/21 (até 5% do valor global).
+                                        ✔️ <strong>Garantia Contratual:</strong> Exigível contratualmente (até 5% do valor global).
                                     </p>
-                                </div>
-                            </div>
-
-                            <div id="sub-wrap-sub2" class="sub-wrapper hidden p-5">
-                                <div class="border border-slate-800 p-5 rounded bg-slate-950/40 font-serif text-[10.5px] text-slate-300 space-y-3 leading-relaxed">
-                                    <h5 class="font-extrabold text-center text-slate-100">PROPOSTA TÉCNICA E COMERCIAL DETALHADA E CONSOLIDADA</h5>
-                                    <p class="font-bold text-slate-200">AO EXCELENTÍSSIMO SENHOR AGENTE DE CONTRATAÇÃO DA CENTRAL DE LICITAÇÕES DO ÓRGÃO EM REFERÊNCIA</p>
-                                    <p><strong>REF:</strong> PROCESSO DE LICITAÇÃO PÚBLICA / PREGÃO ELETRÓNICO Nº 2026<br>
-                                    <strong>LICITANTE PROPONENTE:</strong> EMPRESA (xxx)</p>
-                                    <hr class="border-slate-800">
-                                    <h6 class="font-bold text-slate-100 uppercase">I. QUALIFICAÇÃO INTEGRAL DA PROPONENTE</h6>
-                                    <p class="text-slate-400">A empresa <strong>EMPRESA (xxx)</strong>, regularmente inscrita no Cadastro Nacional da Pessoa Jurídica sob o nº <strong>(xxx)</strong>, estabelecida com sede comercial corporativa... neste ato representada por seu Procurador e Signatário Legalmente Outorgado, o Sr. <strong>REPRESENTANTE (xxx)</strong>...</p>
                                 </div>
                             </div>
                         </div>
@@ -553,86 +412,45 @@
                             <h3 class="text-2xl font-extrabold text-slate-100 mt-3">Health-Bid Copilot (IA Suspensa)</h3>
                         </div>
                         <p class="text-sm text-slate-400 leading-relaxed">
-                            Widget flutuante estilo Grammarly (Extensão do Chrome) integrado a LLMs de alta performance. Ele analisa os termos do edital no ecrã ativo, quantifica valores e avalia instantaneamente a aderência jurídica e estratégica.
+                            Widget flutuante estilo Grammarly (Extensão do Chrome) integrado a LLMs de alta performance. Ele analisa os termos do edital no ecrã ativo e quantifica valores.
                         </p>
                         <div class="space-y-3 text-xs border-t border-slate-855 pt-4 text-slate-500">
-                            <p><strong class="text-slate-400">Gargalo Resolvido:</strong> Desconcentração e perda de tempo ao validar exigências financeiras específicas nos PDFs do governo.</p>
-                            <p><strong class="text-slate-400">Resultado:</strong> Acurácia superior a 96% na identificação imediata de exigências e riscos críticos diretamente no CRM.</p>
+                            <p><strong class="text-slate-400">Gargalo Resolvido:</strong> Desconcentração e perda de tempo ao validar exigências financeiras nos PDFs do governo.</p>
+                            <p><strong class="text-slate-400">Resultado:</strong> Acurácia superior a 96% na identificação de riscos.</p>
                         </div>
                     </div>
                     <div class="lg:col-span-7 space-y-6">
-                        <div class="bg-slate-900 rounded-2xl border border-slate-855 shadow-lg overflow-hidden flex flex-col md:flex-row min-h-[420px]">
-                            <div class="w-full md:w-3/5 p-4 bg-slate-950/60 text-[10px] space-y-3 flex flex-col justify-between border-r border-slate-850">
-                                <div class="space-y-2.5">
-                                    <div class="flex items-center gap-1.5 text-slate-500 font-mono text-[8px]">
-                                        <i class="fas fa-globe"></i> <span>portal_licitacoes.gov.br</span>
-                                    </div>
-                                    <div class="bg-slate-900/60 p-3 rounded border border-slate-800 space-y-1.5">
-                                        <h4 class="font-extrabold text-slate-200 text-[11px]">Objeto: Licitação Eletrónica</h4>
-                                        <p class="text-slate-400 leading-relaxed">
-                                            FUTURA E EVENTUAL CONTRATAÇÃO DE EMPRESA PARA REALIZAÇÃO DE <mark class="bg-blue-900/40 text-blue-300 font-bold px-0.5">SERVIÇOS MÉDICOS</mark> DE INTERESSE DA SECRETARIA MUNICIPAL DE SAÚDE MUNICÍPIO DE FONTE BOA/AM.
-                                        </p>
-                                        <div class="grid grid-cols-2 gap-1 text-[9px] text-slate-500 font-semibold pt-1 border-t border-slate-800">
-                                            <span>Órgão: Pref. de Fonte Boa</span>
-                                            <span>Edital: PE/7/2026</span>
-                                        </div>
-                                    </div>
-                                    <div class="bg-slate-900/60 p-2.5 rounded border border-slate-800 text-slate-400 space-y-1">
-                                        <span class="font-bold text-slate-300 block">Palavra-chave encontrada no edital:</span>
-                                        <p>• escolha da proposta mais vantajosa para SERVIÇOS MÉDICOS...</p>
-                                        <p>• existência de sanção que impede a participação...</p>
-                                    </div>
-                                </div>
-                                <div class="flex items-center gap-2">
-                                    <div class="h-8 w-8 rounded-xl bg-blue-600 flex items-center justify-center text-white text-sm shadow-md animate-bounce cursor-pointer">
-                                        <i class="fas fa-bolt"></i>
-                                    </div>
-                                    <span class="text-[9px] text-slate-500 font-mono">Assistente Suspenso Ativo</span>
+                        <div class="bg-slate-900 rounded-2xl border border-slate-855 shadow-lg overflow-hidden flex flex-col md:flex-row min-h-[300px]">
+                            <div class="w-full md:w-1/2 p-4 bg-slate-950/60 text-[10px] space-y-3 border-r border-slate-850">
+                                <div class="bg-slate-900/60 p-3 rounded border border-slate-800 space-y-1.5">
+                                    <h4 class="font-extrabold text-slate-200 text-[11px]">Objeto: Licitação Eletrónica</h4>
+                                    <p class="text-slate-400 leading-relaxed">
+                                        FUTURA E EVENTUAL CONTRATAÇÃO DE EMPRESA PARA REALIZAÇÃO DE <mark class="bg-blue-900/40 text-blue-300 font-bold px-0.5">SERVIÇOS MÉDICOS</mark>
+                                    </p>
                                 </div>
                             </div>
-
-                            <div class="w-full md:w-2/5 bg-[#0b0f19] text-white p-4 flex flex-col justify-between font-mono text-[9px]">
-                                <div class="space-y-4">
-                                    <div class="flex items-center gap-2 border-b border-slate-900 pb-2">
-                                        <div class="h-6 w-6 rounded bg-blue-600 flex items-center justify-center text-xs">⚡</div>
-                                        <div>
-                                            <h5 class="text-[10px] font-extrabold text-slate-100">Health-Bid Copilot</h5>
-                                            <span class="text-[7.5px] text-slate-500">ANALISANDO: FONTE BOA - AM</span>
-                                        </div>
-                                    </div>
-
-                                    <div class="bg-slate-900 p-3 rounded border border-slate-800 text-center">
-                                        <span class="text-[8px] text-slate-500 uppercase font-bold block">Aderência Estratégica</span>
-                                        <span class="text-2xl font-black text-emerald-400 mt-1 block">92%</span>
-                                        <span class="text-[7px] bg-emerald-950/50 text-emerald-400 px-2 py-0.5 rounded-full inline-block mt-2 font-bold">Alta probabilidade de habilitação</span>
-                                    </div>
-
-                                    <div class="bg-blue-950/20 p-2.5 rounded border border-blue-900/30">
-                                        <span class="text-slate-400 uppercase text-[7px] block mb-1">Empresa Recomendada</span>
-                                        <p class="font-bold text-blue-300 blurred-text">MedPrime Soluções em Saúde Ltda</p>
-                                        <p class="text-[7.5px] text-slate-500 mt-0.5 blurred-text">CNPJ: 00.123.456/0001-99</p>
+                            <div class="w-full md:w-1/2 bg-[#0b0f19] text-white p-4 flex flex-col font-mono text-[9px]">
+                                <div class="flex items-center gap-2 border-b border-slate-900 pb-2 mb-3">
+                                    <div class="h-6 w-6 rounded bg-blue-600 flex items-center justify-center text-xs">⚡</div>
+                                    <div>
+                                        <h5 class="text-[10px] font-extrabold text-slate-100">Health-Bid Copilot</h5>
+                                        <span class="text-[7.5px] text-slate-500">ANALISANDO: FONTE BOA - AM</span>
                                     </div>
                                 </div>
-
-                                <div class="space-y-2 mt-4 pt-2 border-t border-slate-800">
-                                    <div id="copilot-reply-box" class="bg-slate-900 p-2 rounded border border-slate-800 text-slate-400 hidden leading-tight">
-                                        <strong class="text-blue-400 block mb-1">Copilot:</strong>
-                                        <p id="copilot-reply-text"></p>
-                                    </div>
-                                    <div class="flex gap-1">
-                                        <input id="copilot-query-input" type="text" placeholder="Perguntar sobre Fonte Boa..." class="w-full bg-slate-900 border border-slate-850 rounded px-2 py-1 text-white text-[8px] focus:outline-none focus:border-blue-500">
-                                        <button onclick="sendCopilotSimulate()" class="bg-blue-600 text-white font-bold px-2 rounded hover:bg-blue-700">Perguntar</button>
-                                    </div>
-                                    <button class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-1.5 rounded text-center text-[8px] block">
-                                        QUALIFICAR NO CRM <i class="fas fa-external-link-alt text-[7px] ml-0.5"></i>
-                                    </button>
+                                <div class="bg-slate-900 p-3 rounded border border-slate-800 text-center mb-3">
+                                    <span class="text-[8px] text-slate-500 uppercase font-bold block">Aderência Estratégica</span>
+                                    <span class="text-2xl font-black text-emerald-400 mt-1 block">92%</span>
+                                </div>
+                                <div class="bg-blue-950/20 p-2.5 rounded border border-blue-900/30">
+                                    <span class="text-slate-400 uppercase text-[7px] block mb-1">Empresa Recomendada</span>
+                                    <p class="font-bold text-blue-300 blurred-text">MedPrime Soluções</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- PROJETO 6 (NOVO) -->
+                <!-- PROJETO 6 -->
                 <div id="wrapper-p6" class="project-wrapper hidden grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
                     <div class="lg:col-span-5 bg-slate-900/40 p-6 sm:p-8 rounded-2xl border border-slate-850 shadow-sm space-y-6">
                         <div>
@@ -643,47 +461,11 @@
                             Sistema que automatiza a régua de relacionamento de vendas B2G (cold-mail e follow-up). O código captura variáveis cadastrais em massa para construir e disparar convites personalizados em HTML.
                         </p>
                         <div class="space-y-3 text-xs border-t border-slate-850 pt-4 text-slate-500">
-                            <p><strong class="text-slate-400">Gargalo Resolvido:</strong> Resolveu a lentidão e o esforço braçal da equipe comercial ao redigir, enviar e acompanhar manualmente cada convite para os municípios alvos.</p>
-                            <p><strong class="text-slate-400">Resultado:</strong> Padronizou a comunicação da xxx- xxx e multiplicou a taxa de agendamento de reuniões técnicas de telemedicina para os médicos gestores.</p>
+                            <p><strong class="text-slate-400">Gargalo Resolvido:</strong> Resolveu a lentidão e o esforço braçal da equipe comercial ao redigir e enviar e-mails manualmente.</p>
+                            <p><strong class="text-slate-400">Resultado:</strong> Padronizou a comunicação da xxx- xxx e multiplicou a taxa de agendamento de reuniões técnicas.</p>
                         </div>
                     </div>
                     <div class="lg:col-span-7 space-y-6">
-                        <div class="bg-slate-900 rounded-2xl border border-slate-850 shadow-md overflow-hidden text-xs">
-                            <div class="bg-emerald-700/80 text-white px-4 py-2 font-bold uppercase tracking-wider flex justify-between items-center text-[10px]">
-                                <span><i class="fas fa-table mr-1"></i> Planilha de Cadência (Disparo)</span>
-                                <span class="bg-emerald-900 px-1.5 py-0.5 rounded">Ativo</span>
-                            </div>
-                            <div class="p-4 overflow-x-auto bg-slate-900/20 font-mono text-[9px]">
-                                <table class="w-full text-left">
-                                    <thead>
-                                        <tr class="bg-slate-950 border-b border-slate-850 text-slate-400 font-bold">
-                                            <th class="p-2 border-r border-slate-850">GESTOR / CONTATO</th>
-                                            <th class="p-2 border-r border-slate-850">MUNICÍPIO</th>
-                                            <th class="p-2">STATUS ENVIO</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody class="divide-y divide-slate-855 text-slate-300">
-                                        <tr>
-                                            <td class="p-2 border-r border-slate-850">Milena Aguiar</td>
-                                            <td class="p-2 border-r border-slate-850">AMARGOSA</td>
-                                            <td class="p-2 text-emerald-400 font-bold">ENVIADO (22/10/2025)</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="p-2 border-r border-slate-850">Larissa Gomes Barbosa</td>
-                                            <td class="p-2 border-r border-slate-850">BARREIRAS</td>
-                                            <td class="p-2 text-emerald-400 font-bold">ENVIADO (22/10/2025)</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="p-2 border-r border-slate-850">Victor Manoel Chaves</td>
-                                            <td class="p-2 border-r border-slate-850">TUCANO</td>
-                                            <td class="p-2 text-emerald-400 font-bold">ENVIADO (22/10/2025)</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-
-                        <!-- Pré-visualização do Email Enviado -->
                         <div class="bg-slate-100 text-slate-900 rounded-2xl border border-slate-300 shadow-md overflow-hidden text-xs">
                             <div class="bg-slate-200 px-4 py-2 border-b border-slate-300 flex items-center gap-2 text-[10px]">
                                 <div class="flex gap-1">
@@ -691,7 +473,7 @@
                                     <div class="w-2.5 h-2.5 rounded-full bg-yellow-400"></div>
                                     <div class="w-2.5 h-2.5 rounded-full bg-green-400"></div>
                                 </div>
-                                <span class="font-bold text-slate-600 ml-2">Preview - E-mail Estruturado</span>
+                                <span class="font-bold text-slate-600 ml-2">Preview - E-mail Estruturado Automático</span>
                             </div>
                             <div class="p-4 space-y-3 font-sans">
                                 <p><strong>De:</strong> Jheniffer Barros</p>
@@ -712,6 +494,188 @@
                     </div>
                 </div>
 
+                <!-- PROJETO 7 (NOVO): CRIAÇÃO DE SITES -->
+                <div id="wrapper-p7" class="project-wrapper hidden grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                    <div class="lg:col-span-5 bg-slate-900/40 p-6 sm:p-8 rounded-2xl border border-slate-850 shadow-sm space-y-6">
+                        <div>
+                            <span class="text-xs font-bold uppercase tracking-widest text-pink-400 bg-pink-950/40 px-2.5 py-1 rounded">Frontend & UI/UX Design</span>
+                            <h3 class="text-2xl font-extrabold text-slate-100 mt-3">Criação de Sites e Portfólios</h3>
+                        </div>
+                        <p class="text-sm text-slate-400 leading-relaxed">
+                            Desenvolvimento de páginas web responsivas, portfólios profissionais e landing pages focadas em alta conversão e usabilidade com designs modernos e atrativos.
+                        </p>
+                        <div class="space-y-3 text-xs border-t border-slate-850 pt-4 text-slate-500">
+                            <p><strong class="text-slate-400">Gargalo Resolvido:</strong> Presença digital fraca ou desatualizada que não transmite autoridade ou não converte visitantes em leads.</p>
+                            <p><strong class="text-slate-400">Resultado:</strong> Sites ultrarrápidos, amigáveis para mobile e com interfaces visuais (UI) limpas que destacam a marca do cliente.</p>
+                        </div>
+                        <a href="https://vivianportif-lio.vercel.app/" target="_blank" class="inline-flex items-center justify-center px-5 py-2.5 rounded-xl text-xs font-bold text-white bg-pink-600 hover:bg-pink-700 transition-all shadow-md w-full">
+                            <i class="fas fa-external-link-alt mr-2"></i> Acessar Projeto Real (Vivian Portfolio)
+                        </a>
+                    </div>
+                    <div class="lg:col-span-7 space-y-6">
+                        <!-- Mockup de Navegador Web -->
+                        <div class="bg-slate-800 rounded-xl shadow-2xl overflow-hidden border border-slate-700">
+                            <div class="bg-slate-900 px-4 py-3 flex items-center gap-2 border-b border-slate-700">
+                                <div class="flex gap-1.5">
+                                    <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                                    <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                                    <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                                </div>
+                                <div class="mx-auto bg-slate-800 rounded-md px-3 py-1 text-[10px] text-slate-400 flex items-center gap-2 w-2/3 justify-center">
+                                    <i class="fas fa-lock text-[8px]"></i> https://vivianportif-lio.vercel.app/
+                                </div>
+                            </div>
+                            <!-- Conteúdo do Iframe Simulado -->
+                            <div class="h-72 w-full bg-[#f8f9fa] relative overflow-hidden flex flex-col items-center pt-8">
+                                <div class="w-3/4 text-center space-y-4">
+                                    <h1 class="text-3xl font-serif text-slate-800 font-bold">Vivian <span class="italic font-light text-pink-500">Design</span></h1>
+                                    <p class="text-xs text-slate-500 uppercase tracking-widest">Portfólio Criativo e Minimalista</p>
+                                    <div class="grid grid-cols-2 gap-4 mt-6">
+                                        <div class="h-24 bg-slate-200 rounded-lg shadow-inner"></div>
+                                        <div class="h-24 bg-slate-200 rounded-lg shadow-inner"></div>
+                                    </div>
+                                </div>
+                                <div class="absolute bottom-4 bg-pink-500 text-white text-[10px] px-4 py-1.5 rounded-full shadow-lg font-bold">
+                                    Projeto UI/UX - Simulação
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROJETO 8 (NOVO): CONTROLE FINANCEIRO -->
+                <div id="wrapper-p8" class="project-wrapper hidden grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                    <div class="lg:col-span-5 bg-slate-900/40 p-6 sm:p-8 rounded-2xl border border-slate-850 shadow-sm space-y-6">
+                        <div>
+                            <span class="text-xs font-bold uppercase tracking-widest text-emerald-400 bg-emerald-950/40 px-2.5 py-1 rounded">FinTech & Data Visualization</span>
+                            <h3 class="text-2xl font-extrabold text-slate-100 mt-3">App de Controle Financeiro</h3>
+                        </div>
+                        <p class="text-sm text-slate-400 leading-relaxed">
+                            Aplicação web robusta desenvolvida para gestão financeira pessoal ou empresarial. Permite acompanhamento de receitas, despesas, consolidação de saldo e geração de gráficos de fluxo de caixa em tempo real.
+                        </p>
+                        <div class="space-y-3 text-xs border-t border-slate-850 pt-4 text-slate-500">
+                            <p><strong class="text-slate-400">Gargalo Resolvido:</strong> Falta de visibilidade da saúde financeira, anotações dispersas em cadernos ou planilhas difíceis de interpretar no dia a dia.</p>
+                            <p><strong class="text-slate-400">Resultado:</strong> Gestão centralizada e visual, permitindo alta previsibilidade e tomadas de decisões financeiras baseadas em dados precisos.</p>
+                        </div>
+                        <a href="https://controlfinace.vercel.app/" target="_blank" class="inline-flex items-center justify-center px-5 py-2.5 rounded-xl text-xs font-bold text-white bg-emerald-600 hover:bg-emerald-700 transition-all shadow-md w-full">
+                            <i class="fas fa-external-link-alt mr-2"></i> Acessar Dashboard Financeiro
+                        </a>
+                    </div>
+                    <div class="lg:col-span-7 space-y-6">
+                        <!-- Mockup App Financeiro -->
+                        <div class="bg-slate-50 rounded-2xl shadow-xl overflow-hidden border border-slate-200 p-6 relative">
+                            <div class="flex justify-between items-center mb-6 border-b border-slate-200 pb-4">
+                                <h4 class="text-lg font-bold text-slate-800"><i class="fas fa-wallet text-emerald-500 mr-2"></i> ControlFinance</h4>
+                                <span class="bg-slate-200 text-slate-600 text-[10px] px-2 py-1 rounded font-bold">Resumo Mensal</span>
+                            </div>
+                            
+                            <div class="grid grid-cols-3 gap-4 mb-6">
+                                <div class="bg-white p-4 rounded-xl shadow-sm border border-slate-100">
+                                    <p class="text-[10px] text-slate-400 uppercase font-bold mb-1">Entradas</p>
+                                    <p class="text-lg font-extrabold text-emerald-500">R$ 14.500,00</p>
+                                </div>
+                                <div class="bg-white p-4 rounded-xl shadow-sm border border-slate-100">
+                                    <p class="text-[10px] text-slate-400 uppercase font-bold mb-1">Saídas</p>
+                                    <p class="text-lg font-extrabold text-red-500">R$ 5.230,00</p>
+                                </div>
+                                <div class="bg-emerald-500 p-4 rounded-xl shadow-md text-white">
+                                    <p class="text-[10px] text-emerald-100 uppercase font-bold mb-1">Saldo Atual</p>
+                                    <p class="text-lg font-extrabold">R$ 9.270,00</p>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-white p-4 rounded-xl shadow-sm border border-slate-100">
+                                <h5 class="text-[11px] font-bold text-slate-600 mb-3">Últimas Transações</h5>
+                                <div class="space-y-2 text-[10px] font-mono text-slate-500">
+                                    <div class="flex justify-between items-center border-b border-slate-50 pb-2">
+                                        <span>Pagamento Fatura Cartão</span>
+                                        <span class="text-red-500 font-bold">- R$ 1.200,00</span>
+                                    </div>
+                                    <div class="flex justify-between items-center border-b border-slate-50 pb-2">
+                                        <span>Recebimento Projeto Web</span>
+                                        <span class="text-emerald-500 font-bold">+ R$ 4.500,00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROJETO 9 (NOVO): GESTÃO DE DEMANDAS -->
+                <div id="wrapper-p9" class="project-wrapper hidden grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                    <div class="lg:col-span-5 bg-slate-900/40 p-6 sm:p-8 rounded-2xl border border-slate-850 shadow-sm space-y-6">
+                        <div>
+                            <span class="text-xs font-bold uppercase tracking-widest text-indigo-400 bg-indigo-950/40 px-2.5 py-1 rounded">Workflow & Task Management</span>
+                            <h3 class="text-2xl font-extrabold text-slate-100 mt-3">BidFlow - Gestão de Demandas</h3>
+                        </div>
+                        <p class="text-sm text-slate-400 leading-relaxed">
+                            Sistema de gestão estilo Kanban (Pipeline) focado no controle de fluxo de trabalho de licitações. Gerencia responsáveis, centraliza documentos essenciais e mapeia status e prazos de propostas.
+                        </p>
+                        <div class="space-y-3 text-xs border-t border-slate-850 pt-4 text-slate-500">
+                            <p><strong class="text-slate-400">Gargalo Resolvido:</strong> Desorganização no pipeline de editais, com constante risco de perda de prazos operacionais e falta de comunicação entre equipe de vendas e licitações.</p>
+                            <p><strong class="text-slate-400">Resultado:</strong> Fluxo estruturado que envia alertas e reduz drasticamente a taxa de inabilitação por perda de prazo ou documento faltante.</p>
+                        </div>
+                        <a href="https://bidflow-tul8.vercel.app/" target="_blank" class="inline-flex items-center justify-center px-5 py-2.5 rounded-xl text-xs font-bold text-white bg-indigo-600 hover:bg-indigo-700 transition-all shadow-md w-full">
+                            <i class="fas fa-external-link-alt mr-2"></i> Acessar Kanban BidFlow
+                        </a>
+                    </div>
+                    <div class="lg:col-span-7 space-y-6">
+                        <!-- Mockup App Gestão/Kanban -->
+                        <div class="bg-slate-900 rounded-2xl shadow-xl overflow-hidden border border-slate-800 p-4">
+                            <div class="flex justify-between items-center mb-4 border-b border-slate-800 pb-3">
+                                <h4 class="text-md font-bold text-slate-200"><i class="fas fa-tasks text-indigo-400 mr-2"></i> Pipeline BidFlow</h4>
+                                <button class="bg-indigo-600 text-white text-[10px] font-bold px-3 py-1.5 rounded-md hover:bg-indigo-500">+ Nova Demanda</button>
+                            </div>
+                            
+                            <!-- Colunas do Kanban -->
+                            <div class="grid grid-cols-3 gap-3">
+                                <!-- A Fazer -->
+                                <div class="bg-slate-950/50 p-2.5 rounded-lg border border-slate-850">
+                                    <div class="flex justify-between items-center mb-3">
+                                        <span class="text-[10px] font-bold text-slate-300 uppercase">Em Análise (To-Do)</span>
+                                        <span class="bg-slate-800 text-slate-400 text-[9px] px-1.5 py-0.5 rounded">2</span>
+                                    </div>
+                                    <div class="space-y-2">
+                                        <div class="bg-slate-800 p-2 rounded shadow-sm border border-slate-700 hover:border-indigo-500 cursor-pointer transition-colors">
+                                            <p class="text-[10px] font-bold text-slate-200">Edital Pref. São Paulo</p>
+                                            <p class="text-[9px] text-slate-500 mt-1"><i class="far fa-clock"></i> Prazo: 28/09</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Em Andamento -->
+                                <div class="bg-slate-950/50 p-2.5 rounded-lg border border-slate-850">
+                                    <div class="flex justify-between items-center mb-3">
+                                        <span class="text-[10px] font-bold text-blue-300 uppercase">Proposta (Doing)</span>
+                                        <span class="bg-slate-800 text-slate-400 text-[9px] px-1.5 py-0.5 rounded">1</span>
+                                    </div>
+                                    <div class="space-y-2">
+                                        <div class="bg-slate-800 p-2 rounded shadow-sm border-l-2 border-l-blue-500 border border-slate-700">
+                                            <p class="text-[10px] font-bold text-slate-200">Pregão Telemedicina BA</p>
+                                            <p class="text-[9px] text-slate-500 mt-1"><i class="far fa-user text-blue-400"></i> Resp: Jheniffer B.</p>
+                                            <div class="w-full bg-slate-900 h-1 mt-2 rounded-full"><div class="bg-blue-500 h-full rounded-full" style="width: 60%"></div></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Concluído -->
+                                <div class="bg-slate-950/50 p-2.5 rounded-lg border border-slate-850">
+                                    <div class="flex justify-between items-center mb-3">
+                                        <span class="text-[10px] font-bold text-emerald-300 uppercase">Ganhos (Done)</span>
+                                        <span class="bg-slate-800 text-slate-400 text-[9px] px-1.5 py-0.5 rounded">12</span>
+                                    </div>
+                                    <div class="space-y-2 opacity-60">
+                                        <div class="bg-slate-800 p-2 rounded shadow-sm border border-slate-700">
+                                            <p class="text-[10px] font-bold text-slate-300 line-through">Hospital Regional MG</p>
+                                            <span class="inline-block mt-1 bg-emerald-900/50 text-emerald-400 text-[8px] px-1.5 py-0.5 rounded">Vencido</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -720,7 +684,7 @@
     <footer class="bg-slate-950 text-white py-12 border-t border-slate-900 text-center">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <span class="font-extrabold text-lg bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent block mb-3">Jheniffer Barros</span>
-            <p class="text-xs text-slate-500">© 2026 - Conectando medicina, conformidade regulatória e tecnologia corporativa.</p>
+            <p class="text-xs text-slate-500">© 2026 - Conectando medicina, conformidade regulatória e desenvolvimento de software web.</p>
         </div>
     </footer>
 
@@ -768,35 +732,6 @@
                     }
                 }
             });
-        }
-
-        // Simulador de Chat do Copilot (Projeto 5)
-        function sendCopilotSimulate() {
-            const input = document.getElementById('copilot-query-input');
-            const replyBox = document.getElementById('copilot-reply-box');
-            const replyText = document.getElementById('copilot-reply-text');
-
-            if(!input) return;
-
-            const query = input.value.trim().toLowerCase();
-            if (query === "") return;
-
-            replyBox.classList.remove('hidden');
-            replyText.innerHTML = "A analisar semântica do edital de Fonte Boa...";
-
-            setTimeout(() => {
-                if (query.includes('valor') || query.includes('estimado') || query.includes('preço')) {
-                    replyText.innerHTML = "O edital possui orçamento de R$ 50.400,00 estruturado para a contratação de profissionais médicos em neuropediatria para atuar na UBS local.";
-                } else if (query.includes('risco') || query.includes('garantia') || query.includes('exigência')) {
-                    replyText.innerHTML = "Alerta de risco: Encontrei exigência de capital social mínimo proporcional e necessidade de atestado médico contendo mais de 239 mil horas acumuladas.";
-                } else if (query.includes('empresa') || query.includes('recomendada') || query.includes('aderência')) {
-                    replyText.innerHTML = "Recomendação ideal para: <span class='blurred-text'>[MedPrime Soluções em Saúde Ltda]</span> devido à altíssima aderência documental (+239k horas de atestados validados).";
-                } else {
-                    replyText.innerHTML = "Mapeado no Edital: Fonte Boa/AM requer um contrato eventual em caráter de emergência para suporte ao Hospital Municipal de Pequeno Porte de Cabixi/RO.";
-                }
-            }, 800);
-
-            input.value = "";
         }
     </script>
 </body>
