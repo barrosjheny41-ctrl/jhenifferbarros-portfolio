@@ -281,433 +281,195 @@
         </div>
     </section>
 
-    <!-- Secção Interativa do Portfólio Visual -->
+    <!-- Secção Interativa do Portfólio Visual (Bento Grid) -->
     <section id="projects" class="py-20 relative">
         <div class="absolute inset-0 bg-zinc-900/30"></div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="mb-10 text-center sm:text-left">
-                <h2 class="text-3xl sm:text-4xl font-display font-bold text-white tracking-tight mb-3">Vitrine de <span class="text-gradient">Projetos</span></h2>
-                <p class="text-sm text-zinc-400">Simule a arquitetura das soluções desenvolvidas (dados sensíveis anonimizados).</p>
-            </div>
-
-            <!-- Navegação Horizontal em Pills Estilo Vercel/Stripe -->
-            <div class="relative mb-8">
-                <div class="flex overflow-x-auto hide-scrollbar gap-2 pb-4 snap-x">
-                    <button onclick="changeActiveProject('p1')" id="btn-p1" class="project-tab active-tab px-4 py-2 rounded-full whitespace-nowrap snap-start text-xs font-bold">
-                        Radar Notícias
-                    </button>
-                    <button onclick="changeActiveProject('p2')" id="btn-p2" class="project-tab px-4 py-2 rounded-full whitespace-nowrap snap-start text-xs font-bold">
-                        Extrator Editais
-                    </button>
-                    <button onclick="changeActiveProject('p3')" id="btn-p3" class="project-tab px-4 py-2 rounded-full whitespace-nowrap snap-start text-xs font-bold">
-                        Hub Dashboard
-                    </button>
-                    <button onclick="changeActiveProject('p4')" id="btn-p4" class="project-tab px-4 py-2 rounded-full whitespace-nowrap snap-start text-xs font-bold">
-                        IA Editais PDF
-                    </button>
-                    <button onclick="changeActiveProject('p5')" id="btn-p5" class="project-tab px-4 py-2 rounded-full whitespace-nowrap snap-start text-xs font-bold">
-                        Bid Copilot
-                    </button>
-                    <button onclick="changeActiveProject('p6')" id="btn-p6" class="project-tab px-4 py-2 rounded-full whitespace-nowrap snap-start text-xs font-bold">
-                        CRM E-mails
-                    </button>
-                    <button onclick="changeActiveProject('p7')" id="btn-p7" class="project-tab px-4 py-2 rounded-full whitespace-nowrap snap-start text-xs font-bold">
-                        UI/UX Sites
-                    </button>
-                    <button onclick="changeActiveProject('p8')" id="btn-p8" class="project-tab px-4 py-2 rounded-full whitespace-nowrap snap-start text-xs font-bold">
-                        App Finanças
-                    </button>
-                    <button onclick="changeActiveProject('p9')" id="btn-p9" class="project-tab px-4 py-2 rounded-full whitespace-nowrap snap-start text-xs font-bold">
-                        BidFlow Kanban
-                    </button>
-                    <button onclick="changeActiveProject('p10')" id="btn-p10" class="project-tab px-4 py-2 rounded-full whitespace-nowrap snap-start text-xs font-bold">
-                        Fund-O (Supabase)
-                    </button>
-                    <button onclick="changeActiveProject('p11')" id="btn-p11" class="project-tab px-4 py-2 rounded-full whitespace-nowrap snap-start text-xs font-bold">
-                        Firebase Gestão
-                    </button>
+            <div class="mb-12 text-center sm:text-left flex flex-col sm:flex-row justify-between items-end gap-6">
+                <div>
+                    <h2 class="text-3xl sm:text-4xl font-display font-bold text-white tracking-tight mb-3">Vitrine de <span class="text-gradient">Projetos</span></h2>
+                    <p class="text-sm text-zinc-400 max-w-2xl">Métricas reais, arquiteturas escaláveis e soluções automatizadas focadas em resultados. (Dados sensíveis anonimizados por compliance).</p>
+                </div>
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-accent1/10 border border-brand-accent1/20 text-brand-accent1 text-xs font-bold">
+                    <i class="fas fa-code-branch"></i> 11 Soluções em Produção
                 </div>
             </div>
 
-            <!-- Area de Apresentação dos Projetos -->
-            <div class="glass-card rounded-3xl p-6 sm:p-10 border border-white/5 shadow-2xl relative overflow-hidden">
-                <div class="absolute top-0 right-0 w-64 h-64 bg-brand-accent1/10 rounded-full blur-3xl -z-10"></div>
-                <div class="absolute bottom-0 left-0 w-64 h-64 bg-brand-accent2/10 rounded-full blur-3xl -z-10"></div>
+            <!-- Grelha de Projetos (Bento Style) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 
-                <!-- PROJETO 1 -->
-                <div id="wrapper-p1" class="project-wrapper grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-                    <div class="lg:col-span-5 space-y-6">
-                        <div>
-                            <span class="inline-block px-2.5 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-[10px] font-bold uppercase tracking-widest mb-3">Google Apps Script</span>
-                            <h3 class="text-3xl font-display font-bold text-white">Robô de Notícias e Clipping de Crises</h3>
-                        </div>
-                        <p class="text-sm text-zinc-400 leading-relaxed">
-                            Integração de monitoramento de fontes públicas que recolhe dados em tempo real sobre crises de infraestrutura de saúde e saúde pública para fornecer inteligência ao departamento de negócios.
-                        </p>
-                        <div class="p-4 bg-white/5 border border-white/10 rounded-xl">
-                            <p class="text-xs text-zinc-300 leading-relaxed"><strong class="text-white block mb-1">Impacto Direto:</strong> Automação ativa 24/7. Notificação em canais de chat em até 5 minutos após a publicação, economizando ~10h semanais.</p>
-                        </div>
-                    </div>
-                    <div class="lg:col-span-7">
-                        <div class="bg-[#0c0c0e] rounded-xl border border-white/10 overflow-hidden shadow-2xl">
-                            <div class="bg-[#18181b] px-4 py-3 border-b border-white/5 flex justify-between items-center text-xs text-zinc-400 font-mono">
-                                <span><i class="fas fa-terminal text-zinc-500 mr-2"></i> radar_alert_system.js</span>
-                                <span class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_8px_#10b981]"></span> Active</span>
+                <!-- 1. Health-Bid Copilot (DESTAQUE - Ocupa 2 colunas) -->
+                <div class="lg:col-span-2 glass-card rounded-3xl p-6 sm:p-8 border border-white/10 hover:border-brand-accent1/50 transition-colors group flex flex-col justify-between relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-64 h-64 bg-brand-accent1/10 rounded-full blur-3xl -z-10 group-hover:bg-brand-accent1/20 transition-colors"></div>
+                    <div class="flex flex-col md:flex-row gap-8 items-center h-full">
+                        <div class="flex-1 space-y-4 z-10">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 rounded bg-brand-accent1/20 text-brand-accent1 text-[10px] font-bold uppercase tracking-widest">Generative AI</span>
+                                <span class="px-2 py-1 rounded bg-white/10 text-zinc-300 text-[10px] font-bold uppercase tracking-widest">LLMs / Copilot</span>
                             </div>
-                            <div class="p-5 font-mono text-xs space-y-4">
-                                <div class="bg-red-500/10 border border-red-500/20 p-4 rounded-lg">
-                                    <p class="text-red-400 font-bold mb-2">🚨 URGENTE: PORTAL INFORMA (SÃO PAULO - SP)</p>
-                                    <p class="text-zinc-300">Notícia: <span class="blurred-text">Funcionários do Hospital de Piraju podem entrar em greve devido à falta de repasses operacionais.</span></p>
-                                    <p class="text-zinc-500 mt-2">Ação disparada via Webhook -> Google Chat (Success)</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- PROJETO 2 -->
-                <div id="wrapper-p2" class="project-wrapper hidden grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-                    <div class="lg:col-span-5 space-y-6">
-                        <div>
-                            <span class="inline-block px-2.5 py-1 rounded-full bg-yellow-500/10 border border-yellow-500/20 text-yellow-400 text-[10px] font-bold uppercase tracking-widest mb-3">Python Web Scraping</span>
-                            <h3 class="text-3xl font-display font-bold text-white">Robô Extrator PNCP</h3>
-                        </div>
-                        <p class="text-sm text-zinc-400 leading-relaxed">
-                            Pipeline automatizado para extracção de dados governamentais, consultando a API Nacional de Contratação Pública para filtrar exigências de infraestrutura de saúde e notificar o setor corporativo.
-                        </p>
-                    </div>
-                    <div class="lg:col-span-7">
-                        <div class="bg-[#0c0c0e] rounded-xl border border-white/10 overflow-hidden shadow-2xl font-mono text-xs">
-                            <div class="bg-[#18181b] px-4 py-3 border-b border-white/5 text-zinc-400 flex justify-between items-center">
-                                <span>pncp_database_view</span>
-                            </div>
-                            <div class="overflow-x-auto p-4">
-                                <table class="w-full text-left">
-                                    <thead class="text-zinc-500 border-b border-white/10">
-                                        <tr>
-                                            <th class="pb-3 font-medium">Termo</th>
-                                            <th class="pb-3 font-medium">Objeto</th>
-                                            <th class="pb-3 font-medium text-right">Valor Estimado</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody class="text-zinc-300">
-                                        <tr class="border-b border-white/5">
-                                            <td class="py-3"><span class="bg-white/5 px-2 py-1 rounded text-zinc-400">Saúde/Hospital</span></td>
-                                            <td class="py-3">Aquisição de materiais médicos...</td>
-                                            <td class="py-3 text-right text-emerald-400">R$ 507.650,00</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="py-3"><span class="bg-white/5 px-2 py-1 rounded text-zinc-400">Saúde/Hospital</span></td>
-                                            <td class="py-3">Implantação de infraestrutura...</td>
-                                            <td class="py-3 text-right text-emerald-400">R$ 1.687.503,40</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- PROJETO 3 -->
-                <div id="wrapper-p3" class="project-wrapper hidden grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-                    <div class="lg:col-span-5 space-y-6">
-                        <div>
-                            <span class="inline-block px-2.5 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-[10px] font-bold uppercase tracking-widest mb-3">Data Visualization</span>
-                            <h3 class="text-3xl font-display font-bold text-white">Hub Analyzer Dashboard</h3>
-                        </div>
-                        <p class="text-sm text-zinc-400 leading-relaxed">
-                            Plataforma interna para monitoramento geográfico de operações e prospecções comerciais B2G. Elimina inconsistências e unifica bases de dados.
-                        </p>
-                    </div>
-                    <div class="lg:col-span-7">
-                        <div class="bg-[#18181b] rounded-xl border border-white/10 p-6 shadow-2xl">
-                            <div class="grid grid-cols-2 gap-4 mb-6">
-                                <div class="bg-white/5 p-4 rounded-lg border border-white/5 text-center">
-                                    <span class="text-[10px] uppercase font-bold text-zinc-500 tracking-wider">Total de Contratos</span>
-                                    <span class="text-3xl font-display font-bold text-white block mt-1">64</span>
-                                </div>
-                                <div class="bg-white/5 p-4 rounded-lg border border-white/5 text-center">
-                                    <span class="text-[10px] uppercase font-bold text-zinc-500 tracking-wider">Municípios Ativos</span>
-                                    <span class="text-3xl font-display font-bold text-cyan-400 block mt-1">45</span>
-                                </div>
-                            </div>
-                            <div class="bg-[#09090b] rounded-lg p-6 flex flex-col items-center justify-center border border-white/5 relative overflow-hidden">
-                                <span class="text-xs font-bold text-zinc-400 mb-4 z-10 uppercase tracking-widest">Heatmap Geográfico</span>
-                                <svg class="w-40 h-40 z-10" viewBox="0 0 500 500" fill="none">
-                                    <path d="M 120 100 Q 200 50 350 120 T 450 300 Q 400 450 300 480 T 150 400 T 50 300 T 120 100 Z" fill="#27272a" opacity="0.6"/>
-                                    <path d="M 280 320 Q 340 330 360 380 Q 330 420 280 430 T 230 380 T 280 320 Z" fill="#06b6d4" opacity="0.8"/>
-                                    <path d="M 290 390 Q 320 400 330 420 Q 300 440 280 440 T 260 410 T 290 390 Z" fill="#8b5cf6"/>
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- PROJETO 4 -->
-                <div id="wrapper-p4" class="project-wrapper hidden grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-                    <div class="lg:col-span-5 space-y-6">
-                        <div>
-                            <span class="inline-block px-2.5 py-1 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-400 text-[10px] font-bold uppercase tracking-widest mb-3">NLP & PDF Parsing</span>
-                            <h3 class="text-3xl font-display font-bold text-white">Analisador de Editais Local</h3>
-                        </div>
-                        <p class="text-sm text-zinc-400 leading-relaxed">
-                            Motor em Python focado na validação técnica de PDFs densos (+1000 pág). Automatiza revisão de cláusulas críticas e garantias contratuais em segundos, reduzindo a análise humana de 3h para 12s.
-                        </p>
-                    </div>
-                    <div class="lg:col-span-7">
-                        <div class="bg-[#0c0c0e] rounded-xl border border-white/10 overflow-hidden shadow-2xl font-mono text-xs">
-                            <div class="bg-[#18181b] px-4 py-3 border-b border-white/5 flex justify-between items-center text-zinc-400">
-                                <span><i class="fas fa-file-pdf text-red-500 mr-2"></i> Relatório de Triagem Gerado</span>
-                                <span class="bg-brand-accent1/20 text-brand-accent1 px-2 py-0.5 rounded text-[9px]">Processed: 1.2s</span>
-                            </div>
-                            <div class="p-6 space-y-4">
+                            <h3 class="text-3xl font-display font-bold text-white group-hover:text-brand-accent1 transition-colors">Health-Bid Copilot</h3>
+                            <p class="text-sm text-zinc-400 leading-relaxed">
+                                Assistente virtual integrado na tela de análise (Widget Extensão). Analisa a semântica de regulamentos densos em tempo real para calcular a aderência estratégica e mitigar riscos jurídicos e financeiros.
+                            </p>
+                            <div class="mt-4 pt-4 border-t border-white/10 flex items-center gap-3">
+                                <i class="fas fa-chart-line text-emerald-400 text-xl"></i>
                                 <div>
-                                    <h4 class="text-white font-bold mb-2">Parâmetros Mapeados (Lei 14.133/21)</h4>
-                                    <p class="text-zinc-400">✔️ Modalidade: Pregão Eletrónico</p>
-                                    <p class="text-zinc-400">✔️ Critério: Menor Preço Global (Lote Único)</p>
+                                    <p class="text-xs text-zinc-300"><strong class="text-emerald-400">Impacto p/ Negócio:</strong> Acurácia superior a 96% na identificação instantânea de armadilhas em editais governamentais.</p>
                                 </div>
-                                <div class="bg-amber-500/10 border border-amber-500/20 p-3 rounded">
-                                    <p class="text-amber-400 font-bold mb-1">⚠️ Atenção: Garantias Exigidas</p>
-                                    <p class="text-zinc-400 text-[10px]">Cláusula 9.2: Garantia Contratual fixada no máximo legal de 5% sobre o valor adjudicado.</p>
+                            </div>
+                        </div>
+                        <div class="w-full md:w-2/5 bg-[#09090b] rounded-xl border border-white/5 p-4 shadow-2xl relative">
+                            <div class="absolute -top-3 -right-3 bg-emerald-500 text-white text-[9px] font-bold px-2 py-1 rounded shadow-lg animate-pulse">LIVE SYNC</div>
+                            <h4 class="text-[10px] text-zinc-500 uppercase font-bold mb-3 border-b border-white/5 pb-2">Terminal IA - Análise em Curso</h4>
+                            <div class="space-y-3 font-mono text-[9px]">
+                                <p class="text-zinc-400">> Lendo: <span class="text-white">Edital Pref. Fonte Boa/AM</span></p>
+                                <p class="text-zinc-400">> Extraindo exigências de Telemedicina...</p>
+                                <div class="bg-brand-accent1/20 border border-brand-accent1/30 p-2 rounded text-brand-accent1 font-bold">
+                                    SCORE DE ADERÊNCIA: 92% (Recomendação: GO)
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- PROJETO 5 -->
-                <div id="wrapper-p5" class="project-wrapper hidden grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-                    <div class="lg:col-span-5 space-y-6">
-                        <div>
-                            <span class="inline-block px-2.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-[10px] font-bold uppercase tracking-widest mb-3">Generative AI</span>
-                            <h3 class="text-3xl font-display font-bold text-white">Health-Bid Copilot</h3>
-                        </div>
-                        <p class="text-sm text-zinc-400 leading-relaxed">
-                            Integração inteligente com LLMs (Gemini/Copilot). O assistente analisa a semântica de regulamentos em tempo real na tela para prevenir inabilitações e calcular o score de aderência estratégica.
-                        </p>
+                <!-- 2. Analisador de Editais Local (Ocupa 1 coluna) -->
+                <div class="glass-card rounded-3xl p-6 border border-white/10 hover:border-brand-accent2/50 transition-colors group flex flex-col">
+                    <div class="flex gap-2 mb-4">
+                        <span class="px-2 py-1 rounded bg-brand-accent2/20 text-brand-accent2 text-[10px] font-bold uppercase tracking-widest">Python (NLP)</span>
                     </div>
-                    <div class="lg:col-span-7">
-                        <div class="flex flex-col md:flex-row bg-[#18181b] rounded-xl border border-white/10 overflow-hidden shadow-2xl min-h-[250px]">
-                            <div class="w-full md:w-1/2 p-5 bg-[#09090b] border-r border-white/5 flex flex-col justify-center">
-                                <h4 class="text-zinc-300 font-bold text-[11px] mb-2 font-sans">Texto do Edital Detectado:</h4>
-                                <p class="text-[10px] text-zinc-500 leading-relaxed">
-                                    Contratação de empresa de <span class="text-white font-bold">telemedicina e serviços médicos</span> para suporte às UBS.
-                                </p>
-                            </div>
-                            <div class="w-full md:w-1/2 p-5 flex flex-col justify-center relative">
-                                <div class="flex items-center gap-2 border-b border-white/5 pb-3 mb-4 text-brand-accent1 font-bold text-[10px] uppercase tracking-widest">
-                                    <i class="fas fa-sparkles"></i> Copilot Analysis
-                                </div>
-                                <div class="text-center mb-4">
-                                    <span class="text-[9px] text-zinc-400 uppercase font-bold tracking-widest block mb-1">Aderência Técnica</span>
-                                    <span class="text-4xl font-display font-black text-emerald-400 block">92%</span>
-                                </div>
-                                <p class="text-[9px] text-zinc-400 border-l-2 border-white/10 pl-2">Recomendação: Go (Atende requisitos baseados no CRM).</p>
-                            </div>
-                        </div>
+                    <h3 class="text-xl font-display font-bold text-white mb-3 group-hover:text-brand-accent2 transition-colors">Analisador de PDFs Local</h3>
+                    <p class="text-sm text-zinc-400 leading-relaxed flex-1">
+                        Motor de processamento de texto que varre ficheiros densos (+1000 pág) para encontrar garantias contratuais e prazos ocultos.
+                    </p>
+                    <div class="mt-6 pt-4 border-t border-white/10">
+                        <p class="text-[11px] text-zinc-300"><strong class="text-brand-accent2">Ganho de Tempo:</strong> Reduziu o tempo de auditoria de <span class="text-white font-bold">3 horas para apenas 12 segundos</span> por documento.</p>
                     </div>
                 </div>
 
-                <!-- PROJETO 6 -->
-                <div id="wrapper-p6" class="project-wrapper hidden grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-                    <div class="lg:col-span-5 space-y-6">
-                        <div>
-                            <span class="inline-block px-2.5 py-1 rounded-full bg-orange-500/10 border border-orange-500/20 text-orange-400 text-[10px] font-bold uppercase tracking-widest mb-3">CRM & Automation</span>
-                            <h3 class="text-3xl font-display font-bold text-white">Automação de Cold E-mails</h3>
-                        </div>
-                        <p class="text-sm text-zinc-400 leading-relaxed">
-                            Conversão de bases de leads do Google Sheets em campanhas automatizadas de envio de e-mails em HTML. Padroniza a abordagem e aumenta as taxas de agendamento de reuniões.
-                        </p>
+                <!-- 3. Instituto Fund-O (Supabase) -->
+                <div class="glass-card rounded-3xl p-6 border border-white/10 hover:border-emerald-500/50 transition-colors group flex flex-col">
+                    <div class="flex gap-2 mb-4">
+                        <span class="px-2 py-1 rounded bg-emerald-500/20 text-emerald-400 text-[10px] font-bold uppercase tracking-widest">SQL / Supabase</span>
                     </div>
-                    <div class="lg:col-span-7">
-                        <div class="bg-[#e2e8f0] text-slate-900 rounded-xl overflow-hidden shadow-2xl text-xs">
-                            <div class="bg-slate-300 px-4 py-3 flex items-center gap-2 text-[10px] font-bold text-slate-600 uppercase">
-                                <i class="fas fa-envelope text-slate-500"></i> Preview do Template
-                            </div>
-                            <div class="p-6 font-sans">
-                                <div class="mb-4 pb-4 border-b border-slate-300 space-y-1">
-                                    <p><strong>De:</strong> Jheniffer Barros</p>
-                                    <p><strong>Assunto:</strong> REUNIÃO GESTÃO DE SAÚDE - xxx- xxx</p>
-                                </div>
-                                <div class="space-y-3 leading-relaxed text-[11px]">
-                                    <p>Prezado(a) <strong>[Nome do Gestor]</strong>,</p>
-                                    <p>Faço parte da xxx- xxx e procuro agendar um momento focado na otimização da saúde em <strong>[Município Alvo]</strong>.</p>
-                                    <div class="pt-2">
-                                        <span class="inline-block bg-blue-600 text-white px-4 py-2 rounded-md font-bold shadow cursor-pointer">Confirmar Agendamento</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <h3 class="text-xl font-display font-bold text-white mb-3 group-hover:text-emerald-400 transition-colors">Portal Inst. Fund-O</h3>
+                    <p class="text-sm text-zinc-400 leading-relaxed flex-1">
+                        Backend relacional estruturado com PostgreSQL (Supabase) e Row Level Security (RLS) para gestão segura de utilizadores e acessos.
+                    </p>
+                    <div class="mt-6 pt-4 border-t border-white/10">
+                        <p class="text-[11px] text-zinc-300"><strong class="text-emerald-400">Arquitetura:</strong> Banco de dados centralizado altamente escalável e seguro para operações B2B.</p>
                     </div>
                 </div>
 
-                <!-- PROJETO 7 (SITES) -->
-                <div id="wrapper-p7" class="project-wrapper hidden grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-                    <div class="lg:col-span-5 space-y-6">
-                        <div>
-                            <span class="inline-block px-2.5 py-1 rounded-full bg-pink-500/10 border border-pink-500/20 text-pink-400 text-[10px] font-bold uppercase tracking-widest mb-3">UI/UX & Frontend</span>
-                            <h3 class="text-3xl font-display font-bold text-white">Criação de Sites e Portfólios</h3>
-                        </div>
-                        <p class="text-sm text-zinc-400 leading-relaxed">
-                            Desenvolvimento de páginas web responsivas e landing pages com foco em design moderno, tempos de carregamento ultra-rápidos e alta conversão (ex: Vivian Design).
-                        </p>
-                        <a href="https://vivianportif-lio.vercel.app/" target="_blank" class="inline-flex items-center justify-center px-6 py-3 rounded-full text-xs font-bold text-white bg-white/10 hover:bg-white/20 border border-white/10 transition-all">
-                            Visitar Projeto <i class="fas fa-external-link-alt ml-2"></i>
-                        </a>
+                <!-- 4. Gestão de Projetos (Firebase) -->
+                <div class="glass-card rounded-3xl p-6 border border-white/10 hover:border-orange-500/50 transition-colors group flex flex-col">
+                    <div class="flex gap-2 mb-4">
+                        <span class="px-2 py-1 rounded bg-orange-500/20 text-orange-400 text-[10px] font-bold uppercase tracking-widest">Firebase / SaaS</span>
                     </div>
-                    <div class="lg:col-span-7">
-                        <div class="bg-white rounded-xl overflow-hidden shadow-2xl border border-white/10">
-                            <div class="bg-slate-100 px-3 py-2 flex items-center gap-1.5 border-b border-slate-200">
-                                <div class="w-2.5 h-2.5 rounded-full bg-red-400"></div>
-                                <div class="w-2.5 h-2.5 rounded-full bg-amber-400"></div>
-                                <div class="w-2.5 h-2.5 rounded-full bg-green-400"></div>
-                                <div class="mx-auto bg-white border border-slate-200 rounded px-2 py-0.5 text-[9px] text-slate-500 flex items-center gap-1.5 font-mono">
-                                    <i class="fas fa-lock"></i> vivianportif-lio.vercel.app
-                                </div>
-                            </div>
-                            <div class="h-64 flex flex-col items-center justify-center text-center p-6 text-slate-800">
-                                <h1 class="text-3xl font-serif font-bold mb-1">Vivian <span class="text-pink-500 italic font-light">Design</span></h1>
-                                <p class="text-[10px] uppercase tracking-widest font-bold text-slate-400">Arquitetura de Interiores</p>
-                            </div>
-                        </div>
+                    <h3 class="text-xl font-display font-bold text-white mb-3 group-hover:text-orange-400 transition-colors">SaaS Gestão de Projetos</h3>
+                    <p class="text-sm text-zinc-400 leading-relaxed flex-1">
+                        Plataforma na cloud integrada ao Google Firebase para sincronização e atualização de dados e tarefas de equipas em tempo real (WebSockets).
+                    </p>
+                    <div class="mt-6 pt-4 border-t border-white/10">
+                        <p class="text-[11px] text-zinc-300"><strong class="text-orange-400">Desempenho:</strong> Resposta instantânea da UI sincronizada com a base NoSQL remota.</p>
                     </div>
                 </div>
 
-                <!-- PROJETO 8 (FINANÇAS) -->
-                <div id="wrapper-p8" class="project-wrapper hidden grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-                    <div class="lg:col-span-5 space-y-6">
-                        <div>
-                            <span class="inline-block px-2.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-500 text-[10px] font-bold uppercase tracking-widest mb-3">FinTech Web App</span>
-                            <h3 class="text-3xl font-display font-bold text-white">App de Gestão Financeira</h3>
-                        </div>
-                        <p class="text-sm text-zinc-400 leading-relaxed">
-                            Aplicação desenhada para controlo de finanças empresariais. Realiza cálculos de consolidação de saldo em tempo real, organizando entradas e saídas num dashboard intuitivo.
-                        </p>
-                        <a href="https://controlfinace.vercel.app/" target="_blank" class="inline-flex items-center justify-center px-6 py-3 rounded-full text-xs font-bold text-white bg-white/10 hover:bg-white/20 border border-white/10 transition-all">
-                            Acessar Dashboard <i class="fas fa-external-link-alt ml-2"></i>
-                        </a>
+                <!-- 5. Hub Analyzer Dashboard -->
+                <div class="glass-card rounded-3xl p-6 border border-white/10 hover:border-blue-500/50 transition-colors group flex flex-col">
+                    <div class="flex gap-2 mb-4">
+                        <span class="px-2 py-1 rounded bg-blue-500/20 text-blue-400 text-[10px] font-bold uppercase tracking-widest">Data Visualization</span>
                     </div>
-                    <div class="lg:col-span-7">
-                        <div class="bg-white rounded-xl shadow-2xl p-6 border border-white/10">
-                            <h4 class="text-sm font-black font-sans text-slate-900 mb-6 border-b border-slate-100 pb-4"><i class="fas fa-wallet text-emerald-500 mr-2"></i> ControlFinance</h4>
-                            <div class="grid grid-cols-3 gap-3">
-                                <div class="bg-slate-50 p-4 rounded-lg border border-slate-100 text-center">
-                                    <p class="text-[9px] text-slate-400 uppercase font-bold mb-1 tracking-wider">Entradas</p>
-                                    <p class="text-sm font-black text-slate-700">R$ 14.5k</p>
-                                </div>
-                                <div class="bg-slate-50 p-4 rounded-lg border border-slate-100 text-center">
-                                    <p class="text-[9px] text-slate-400 uppercase font-bold mb-1 tracking-wider">Saídas</p>
-                                    <p class="text-sm font-black text-slate-700">R$ 5.2k</p>
-                                </div>
-                                <div class="bg-emerald-500 p-4 rounded-lg text-center shadow-lg shadow-emerald-500/20">
-                                    <p class="text-[9px] text-emerald-100 uppercase font-bold mb-1 tracking-wider">Saldo Líquido</p>
-                                    <p class="text-sm font-black text-white">R$ 9.3k</p>
-                                </div>
-                            </div>
-                        </div>
+                    <h3 class="text-xl font-display font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">Hub Analyzer Dashboard</h3>
+                    <p class="text-sm text-zinc-400 leading-relaxed flex-1">
+                        Interface analítica que renderiza heatmaps geográficos e unifica métricas dispersas para o controlo de SLAs contratuais.
+                    </p>
+                    <div class="mt-6 pt-4 border-t border-white/10">
+                        <p class="text-[11px] text-zinc-300"><strong class="text-blue-400">Inteligência:</strong> Transforma bases complexas num ecrã único de decisão executiva.</p>
                     </div>
                 </div>
 
-                <!-- PROJETO 9 (BIDFLOW) -->
-                <div id="wrapper-p9" class="project-wrapper hidden grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-                    <div class="lg:col-span-5 space-y-6">
-                        <div>
-                            <span class="inline-block px-2.5 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-[10px] font-bold uppercase tracking-widest mb-3">SaaS Kanban</span>
-                            <h3 class="text-3xl font-display font-bold text-white">BidFlow - Gestão Kanban</h3>
-                        </div>
-                        <p class="text-sm text-zinc-400 leading-relaxed">
-                            Infraestrutura de gestão de demandas (pipeline de vendas/editais). Evita inabilitações por perda de prazos e alinha operações técnicas e comerciais.
-                        </p>
-                        <a href="https://bidflow-tul8.vercel.app/" target="_blank" class="inline-flex items-center justify-center px-6 py-3 rounded-full text-xs font-bold text-white bg-white/10 hover:bg-white/20 border border-white/10 transition-all">
-                            Acessar BidFlow <i class="fas fa-external-link-alt ml-2"></i>
-                        </a>
+                <!-- 6. Extrator PNCP -->
+                <div class="glass-card rounded-3xl p-6 border border-white/10 hover:border-yellow-500/50 transition-colors group flex flex-col">
+                    <div class="flex gap-2 mb-4">
+                        <span class="px-2 py-1 rounded bg-yellow-500/20 text-yellow-400 text-[10px] font-bold uppercase tracking-widest">Web Scraping</span>
+                        <span class="px-2 py-1 rounded bg-white/10 text-zinc-300 text-[10px] font-bold uppercase tracking-widest">Python</span>
                     </div>
-                    <div class="lg:col-span-7">
-                        <div class="bg-[#18181b] rounded-xl border border-white/10 p-5 shadow-2xl">
-                            <h4 class="text-sm font-bold text-white uppercase tracking-widest mb-5"><i class="fas fa-columns text-blue-400 mr-2"></i> Pipeline Workflow</h4>
-                            <div class="grid grid-cols-3 gap-3">
-                                <div class="bg-[#09090b] p-3 rounded-lg border border-white/5">
-                                    <span class="text-[9px] font-bold text-zinc-500 uppercase tracking-widest mb-3 block">To-Do (2)</span>
-                                    <div class="bg-[#18181b] p-2 rounded border border-white/5 border-l-2 border-l-zinc-500"><p class="text-[10px] text-zinc-300">Edital São Paulo</p></div>
-                                </div>
-                                <div class="bg-[#09090b] p-3 rounded-lg border border-white/5">
-                                    <span class="text-[9px] font-bold text-zinc-500 uppercase tracking-widest mb-3 block">Doing (1)</span>
-                                    <div class="bg-[#18181b] p-2 rounded border border-white/5 border-l-2 border-l-blue-500"><p class="text-[10px] text-zinc-300">Pregão BA</p></div>
-                                </div>
-                                <div class="bg-[#09090b] p-3 rounded-lg border border-white/5">
-                                    <span class="text-[9px] font-bold text-zinc-500 uppercase tracking-widest mb-3 block">Done (12)</span>
-                                    <div class="bg-[#18181b] p-2 rounded border border-white/5 border-l-2 border-l-emerald-500 opacity-50"><p class="text-[10px] text-zinc-300 line-through">Hospital MG</p></div>
-                                </div>
-                            </div>
-                        </div>
+                    <h3 class="text-xl font-display font-bold text-white mb-3 group-hover:text-yellow-400 transition-colors">Robô Extrator PNCP</h3>
+                    <p class="text-sm text-zinc-400 leading-relaxed flex-1">
+                        Consumo direto da API Nacional de Compras Públicas. Varre e consolida milhões em valor estimado de licitações na área da saúde.
+                    </p>
+                    <div class="mt-6 pt-4 border-t border-white/10">
+                        <p class="text-[11px] text-zinc-300"><strong class="text-yellow-400">Pipeline de Dados:</strong> Abastecimento do funil de vendas de forma 100% autônoma.</p>
                     </div>
                 </div>
 
-                <!-- PROJETO 10 (FUND-O) -->
-                <div id="wrapper-p10" class="project-wrapper hidden grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-                    <div class="lg:col-span-5 space-y-6">
-                        <div>
-                            <span class="inline-block px-2.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-[10px] font-bold uppercase tracking-widest mb-3">SQL Database (Supabase)</span>
-                            <h3 class="text-3xl font-display font-bold text-white">Instituto Fund-O</h3>
-                        </div>
-                        <p class="text-sm text-zinc-400 leading-relaxed">
-                            Plataforma construída sob arquitetura SQL com PostgreSQL via Supabase. Estruturação de dados relacionais robusta garantindo RLS (Row Level Security).
-                        </p>
-                        <a href="https://institutofund-o.vercel.app/" target="_blank" class="inline-flex items-center justify-center px-6 py-3 rounded-full text-xs font-bold text-white bg-white/10 hover:bg-white/20 border border-white/10 transition-all">
-                            Acessar Plataforma <i class="fas fa-external-link-alt ml-2"></i>
-                        </a>
+                <!-- 7. Automação Cold E-mails -->
+                <div class="glass-card rounded-3xl p-6 border border-white/10 hover:border-zinc-300/50 transition-colors group flex flex-col">
+                    <div class="flex gap-2 mb-4">
+                        <span class="px-2 py-1 rounded bg-zinc-500/20 text-zinc-300 text-[10px] font-bold uppercase tracking-widest">Workspace Auto</span>
                     </div>
-                    <div class="lg:col-span-7">
-                        <div class="bg-[#0c0c0e] rounded-xl border border-white/10 overflow-hidden shadow-2xl">
-                            <div class="bg-[#18181b] px-4 py-3 flex justify-between border-b border-white/5 font-mono text-[10px]">
-                                <span class="text-emerald-400"><i class="fas fa-database mr-1"></i> Supabase DB</span>
-                                <span class="text-zinc-500">PostgreSQL</span>
-                            </div>
-                            <div class="p-6 text-center">
-                                <h1 class="text-2xl font-serif text-white font-bold mb-6">Instituto <span class="text-emerald-400">Fund-O</span></h1>
-                                <div class="bg-[#09090b] p-4 rounded border border-white/5 font-mono text-[9px] text-zinc-400 text-left">
-                                    <p class="text-emerald-400 font-bold mb-2">SELECT * FROM public.users;</p>
-                                    <p class="text-zinc-300">id | name          | role</p>
-                                    <p class="text-zinc-600">---+---------------+-------</p>
-                                    <p>1  | Admin System  | Admin</p>
-                                    <p>2  | Dept. Finance | Editor</p>
-                                </div>
-                            </div>
-                        </div>
+                    <h3 class="text-xl font-display font-bold text-white mb-3 group-hover:text-white transition-colors">Disparo Comercial em Lote</h3>
+                    <p class="text-sm text-zinc-400 leading-relaxed flex-1">
+                        Script que estrutura e envia centenas de cold-mails hiper-personalizados em HTML capturando variáveis de bases de leads.
+                    </p>
+                    <div class="mt-6 pt-4 border-t border-white/10">
+                        <p class="text-[11px] text-zinc-300"><strong class="text-white">Escalabilidade:</strong> Fim do trabalho braçal e aumento vertiginoso nos agendamentos B2B.</p>
                     </div>
                 </div>
 
-                <!-- PROJETO 11 (FIREBASE) -->
-                <div id="wrapper-p11" class="project-wrapper hidden grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-                    <div class="lg:col-span-5 space-y-6">
-                        <div>
-                            <span class="inline-block px-2.5 py-1 rounded-full bg-orange-500/10 border border-orange-500/20 text-orange-400 text-[10px] font-bold uppercase tracking-widest mb-3">Real-time Cloud DB</span>
-                            <h3 class="text-3xl font-display font-bold text-white">Gestão de Projetos (Firebase)</h3>
-                        </div>
-                        <p class="text-sm text-zinc-400 leading-relaxed">
-                            Sistema SaaS integrado ao <strong>Google Firebase</strong> para sincronização de dados em tempo real. Ideal para colaboração instantânea de equipas remotas (WebSockets).
-                        </p>
-                        <a href="https://gestaodeprojeto-dusky.vercel.app/" target="_blank" class="inline-flex items-center justify-center px-6 py-3 rounded-full text-xs font-bold text-white bg-white/10 hover:bg-white/20 border border-white/10 transition-all">
-                            Testar Aplicação <i class="fas fa-external-link-alt ml-2"></i>
-                        </a>
+                <!-- 8. BidFlow Kanban -->
+                <div class="glass-card rounded-3xl p-6 border border-white/10 hover:border-brand-accent1/50 transition-colors group flex flex-col">
+                    <div class="flex gap-2 mb-4">
+                        <span class="px-2 py-1 rounded bg-brand-accent1/20 text-brand-accent1 text-[10px] font-bold uppercase tracking-widest">Workflow / UX</span>
                     </div>
-                    <div class="lg:col-span-7">
-                        <div class="bg-white rounded-xl shadow-2xl p-6 border border-white/10 relative overflow-hidden">
-                            <div class="absolute top-0 right-0 p-3">
-                                <span class="bg-orange-100 text-orange-700 text-[8px] uppercase font-bold px-2 py-1 rounded"><i class="fas fa-bolt"></i> Live Sync</span>
-                            </div>
-                            <h4 class="text-lg font-black font-sans text-slate-800 mb-6 border-b border-slate-100 pb-3">Project Dashboard</h4>
-                            <div class="grid grid-cols-2 gap-4">
-                                <div class="bg-slate-50 border border-slate-200 p-4 rounded-lg">
-                                    <h3 class="text-xs font-bold text-slate-700 mb-3">UI/UX Sync</h3>
-                                    <div class="w-full bg-slate-200 h-1.5 rounded-full mb-1"><div class="bg-orange-500 h-full rounded-full" style="width: 75%"></div></div>
-                                </div>
-                                <div class="bg-slate-50 border border-slate-200 p-4 rounded-lg">
-                                    <h3 class="text-xs font-bold text-slate-700 mb-3">Cloud DB</h3>
-                                    <div class="w-full bg-slate-200 h-1.5 rounded-full mb-1"><div class="bg-blue-500 h-full rounded-full" style="width: 40%"></div></div>
-                                </div>
-                            </div>
-                        </div>
+                    <h3 class="text-xl font-display font-bold text-white mb-3 group-hover:text-brand-accent1 transition-colors">BidFlow Kanban</h3>
+                    <p class="text-sm text-zinc-400 leading-relaxed flex-1">
+                        Sistema visual para rastrear propostas comerciais, responsáveis e prazos operacionais, reduzindo drasticamente inabilitações.
+                    </p>
+                    <div class="mt-6 pt-4 border-t border-white/10">
+                        <p class="text-[11px] text-zinc-300"><strong class="text-brand-accent1">Organização:</strong> Centralização do pipeline comercial B2G.</p>
+                    </div>
+                </div>
+
+                <!-- 9. Radar de Notícias -->
+                <div class="glass-card rounded-3xl p-6 border border-white/10 hover:border-red-500/50 transition-colors group flex flex-col">
+                    <div class="flex gap-2 mb-4">
+                        <span class="px-2 py-1 rounded bg-red-500/20 text-red-400 text-[10px] font-bold uppercase tracking-widest">Webhooks</span>
+                    </div>
+                    <h3 class="text-xl font-display font-bold text-white mb-3 group-hover:text-red-400 transition-colors">Clipping de Crises</h3>
+                    <p class="text-sm text-zinc-400 leading-relaxed flex-1">
+                        Monitoriza a internet atrás de crises hospitalares e dispara alertas via Webhooks no Google Chat em menos de 5 minutos.
+                    </p>
+                    <div class="mt-6 pt-4 border-t border-white/10">
+                        <p class="text-[11px] text-zinc-300"><strong class="text-red-400">Inteligência:</strong> Permite abordagens comerciais urgentes e contextuais.</p>
+                    </div>
+                </div>
+
+                <!-- 10. Criação de Sites -->
+                <div class="glass-card rounded-3xl p-6 border border-white/10 hover:border-pink-500/50 transition-colors group flex flex-col">
+                    <div class="flex gap-2 mb-4">
+                        <span class="px-2 py-1 rounded bg-pink-500/20 text-pink-400 text-[10px] font-bold uppercase tracking-widest">Frontend HTML/CSS</span>
+                    </div>
+                    <h3 class="text-xl font-display font-bold text-white mb-3 group-hover:text-pink-400 transition-colors">Portfólios Web (Vivian)</h3>
+                    <p class="text-sm text-zinc-400 leading-relaxed flex-1">
+                        Design e desenvolvimento de landing pages focadas em conversão, carregamento rápido e interfaces minimalistas.
+                    </p>
+                    <div class="mt-6 pt-4 border-t border-white/10">
+                        <p class="text-[11px] text-zinc-300"><strong class="text-pink-400">Branding:</strong> Transmite alta autoridade digital aos clientes finais.</p>
+                    </div>
+                </div>
+
+                <!-- 11. Finanças App -->
+                <div class="glass-card rounded-3xl p-6 border border-white/10 hover:border-emerald-400/50 transition-colors group flex flex-col">
+                    <div class="flex gap-2 mb-4">
+                        <span class="px-2 py-1 rounded bg-emerald-500/20 text-emerald-400 text-[10px] font-bold uppercase tracking-widest">Web App</span>
+                    </div>
+                    <h3 class="text-xl font-display font-bold text-white mb-3 group-hover:text-emerald-400 transition-colors">ControlFinance</h3>
+                    <p class="text-sm text-zinc-400 leading-relaxed flex-1">
+                        Dashboard financeiro dinâmico que estrutura cálculos e exibe o balanço (Receitas x Despesas) em tempo real de forma limpa.
+                    </p>
+                    <div class="mt-6 pt-4 border-t border-white/10">
+                        <p class="text-[11px] text-zinc-300"><strong class="text-emerald-400">Lógica:</strong> Matemática e manipulação de estado do DOM aplicadas a FinTech.</p>
                     </div>
                 </div>
 
@@ -725,30 +487,5 @@
             </a>
         </div>
     </footer>
-
-    <!-- Script de Tabs -->
-    <script>
-        function changeActiveProject(projectId) {
-            // Esconder tudo
-            document.querySelectorAll('.project-wrapper').forEach(wrapper => {
-                wrapper.classList.add('hidden');
-            });
-            // Mostrar ativo
-            document.getElementById('wrapper-' + projectId).classList.remove('hidden');
-
-            // Reset tabs
-            document.querySelectorAll('.project-tab').forEach(tab => {
-                tab.classList.remove('active-tab');
-            });
-            
-            // Ativar tab clicada
-            const activeBtn = document.getElementById('btn-' + projectId);
-            if(activeBtn) {
-                activeBtn.classList.add('active-tab');
-                // Scroll suave horizontal para manter o botão visível em mobile
-                activeBtn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
-            }
-        }
-    </script>
 </body>
 </html>
